@@ -18,13 +18,22 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+<h1 align='center' style='font-size: 50px;'>Poke - Dex</h1>
+<h3 align='center'>Project By: Nathan Cuevas & Christian ...</h3>
 
-To learn more about Next.js, take a look at the following resources:
+## Folder Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- public - folder - Holds all the necessary files/images that we will need for the project
+- src - all the folders & files used for the UI/UX of the project including the source directory
+  - components - folder - All elements/Components that are used site wide and will be reused multiple times throughout the project
+  - data - folder - Has any necessary/persistent data that will last throughout the project.
+  - layouts - folder - any layouts that are gonna be used throughout the entire project including: (Navbars, Sidebars, Footers, Headers, Hero Sections, etc..)
+  - lib - folder - holds any helper functions that will be used throughout the project also making it easier to update and refactor libraries that are being updated.
+    - Example : Making a global fetch Facade Pattern that you can easily later replace with something like axios.
+  - pages - folder `root directory` - everything in the pages folder is gonna be the routing for the web app, the index.js file in here points to our websites home page.
+    - api - folder - this is the api that comes with next.js framework useful for creating dynamic routes and our own api.
+  - utils - folder - contains any helper functions that will be needed such as currency converters, or money converters, something that won't need changing and can be sectioned out on its own
+- styles - folder - has all the style sheets (mainly the gloabal stylesheet) that is for the project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+

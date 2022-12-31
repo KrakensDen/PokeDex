@@ -24,6 +24,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ## Folder Structure
 
+###  [Watch this Youtube video on the folder structure that works best for me](https://www.youtube.com/watch?v=UUga4-z7b6s&list=PLIunL27VFHuDbRqHUXxkLVOk3ctdJk7qD&index=16)
+
 - public - folder - Holds all the necessary files/images that we will need for the project
 - src - all the folders & files used for the UI/UX of the project including the source directory
   - components - folder - All elements/Components that are used site wide and will be reused multiple times throughout the project

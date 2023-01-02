@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.1",
+    "@nextui-org/react": "^1.0.0-beta.11",
     "@prisma/client": "^4.8.0",
     "next": "13.1.1",
     "react": "18.2.0",

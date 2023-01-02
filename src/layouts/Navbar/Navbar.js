@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./nav.module.css";
-import Brand from "../Brand/Brand";
-import HamburgerBtn from "../HamburgerBtn/HamburgerBtn";
+import Brand from "../../components/ui/Brand/Brand";
+import HamburgerBtn from "../../components/ui/HamburgerBtn/HamburgerBtn";
 import { Popover, Button } from "@nextui-org/react";
 
 const Navbar = () => {
+
   return (
     <nav className={styles.nav}>
       <Brand />

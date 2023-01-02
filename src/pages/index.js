@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
 import Link from "next/link";
 import Button, {
   LoginButton,
 } from "../components/styled-components/Button/Button";
-import Navbar from "../components/ui/Navbar/Navbar";
+import Navbar from "../layouts/Navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,13 +40,13 @@ export default function Home() {
       <main>
         <Navbar></Navbar>
 
-        {/* 
+        {/*
         Example of a styled Component  
           <LoginButton>Button</LoginButton> 
         Login Button found in the components/styled-components/Button/Button.styles.js file 
         */}
-
-        <Button>
+        <LoginButton>Button</LoginButton>
+        <Button variant='outline'>
           <Link href={"/PokemonList"}>Pokemon List</Link>
         </Button>
       </main>

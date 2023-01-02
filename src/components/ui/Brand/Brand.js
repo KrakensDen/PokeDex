@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
+import styles from './brand.module.css'
 
 const Brand = () => {
   return (
-    <div>
-      <Image typeof='image' width={ 100} height={ 100} src='/public/images/pokedex-icon-11.jpg' ></Image>
+    <div className={styles.Brand}>
+      <Image typeof='image' width={ 40} height={ 40 } src='/android-chrome-256x256.png' ></Image>
     </div>
   )
 }

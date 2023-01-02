@@ -46,7 +46,7 @@ export default function Home() {
         Login Button found in the components/styled-components/Button/Button.styles.js file 
         */}
         <LoginButton>Button</LoginButton>
-        <Button variant='outline'>
+        <Button>
           <Link href={"/PokemonList"}>Pokemon List</Link>
         </Button>
       </main>

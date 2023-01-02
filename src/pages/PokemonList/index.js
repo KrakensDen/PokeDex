@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from "react"
+import PokemonList from "../../components/ui/PokemonList"
 
-const PokemonList = () => {
+function PokemonListPage() {
+  
+  const [pokemon, setPokemon] = useState(['bulbasaur', 'charmander'])
 
   return (
     <div>
       <h1>Pokemon List</h1>
+      <PokemonList pokemon={pokemon} />
     </div>
   )
 }
 
-export default PokemonList
+export default PokemonListPage

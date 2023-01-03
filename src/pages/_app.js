@@ -1,26 +1,21 @@
 import "../../styles/globals.css";
-import Footer from "../layouts/Footer/Footer";
-import Header from "../layouts/Header/Header";
-import "/styles/layout.css";
+import { SSRProvider } from "@react-aria/ssr";
+import AppLayout from "../layouts/AppLayout";
 
 export default function App({ Component, pageProps }) {
-
-  if(Component.getLayout) {
+  if (Component.getLayout) {
     return (
-
-      Component.getLayout(
-      <Component {...pageProps} />
-      )
-
-    )
+      <SSRProvider>
+        {Component.getLayout(<Component {...pageProps} />)}
+      </SSRProvider>
+    );
   }
 
-
   return (
-    <>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-    </>
+    <SSRProvider>
+      <AppLayout title={"PokeDex"}>
+        <Component {...pageProps} />
+      </AppLayout>
+    </SSRProvider>
   );
 }

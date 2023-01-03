@@ -1,6 +1,7 @@
-import React from 'react'
-import styles from './sidebar.module.css'
-import Link from 'next/link'
+import React from "react";
+import styles from "./sidebar.module.css";
+import Link from "next/link";
+import { Collapse } from "@nextui-org/react";
 
 const POKEMON_TYPES = [
   {
@@ -57,27 +58,41 @@ const POKEMON_TYPES = [
   {
     type: "Fairy",
   },
-]
+];
 
 const SideBar = () => {
   return (
     <div className={styles.sidebar}>
-      <h1>Types</h1>
+      <h1>Filter</h1>
       <br />
       <hr />
       <br />
-      {POKEMON_TYPES.map((type) => {
-        return (
-          <>
-          <Link href={'/PokemonList'} id={type.type}>
-            {type.type}
-          </Link>
-          <br/>
-          </>
-        )
-      })}
+      <Collapse.Group>
+      <Collapse className={styles.collapse} title="Types">
+        {POKEMON_TYPES.map((type) => {
+          return (
+            <>
+              <Link className={styles.link} href={"/PokemonList"} id={type.type}>
+                {type.type}
+              </Link><br />
+            </>
+          );
+        })}
+      </Collapse>
+      <Collapse title='Temp'>
+        <h4>Temp</h4>
+        <h4>Temp</h4>
+        <h4>Temp</h4>
+        <h4>Temp</h4>
+        <h4>Temp</h4>
+        <h4>Temp</h4>
+        <h4>Temp</h4>
+        <h4>Temp</h4>
+        <h4>Temp</h4>
+      </Collapse>
+      </Collapse.Group>
     </div>
-  )
-}
+  );
+};
 
-export default SideBar
+export default SideBar;

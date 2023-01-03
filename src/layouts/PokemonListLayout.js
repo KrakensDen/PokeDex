@@ -5,10 +5,10 @@ import AppHead from './AppHead'
 import { PokemonPageContainer } from '../components/styled-components/Container/Container.styles'
 import SideBar from '../layouts/SideBar/SideBar';
 
-const PokemonListLayout = ({ children, title, description, headTitle }) => {
+const PokemonListLayout = ({ children, title, description }) => {
   return (
     <>
-      <AppHead headTitle={headTitle} description={description} />
+      <AppHead headTitle={"PokeList"} description={description} />
       <Header title={title} />
       <PokemonPageContainer>
         <SideBar />

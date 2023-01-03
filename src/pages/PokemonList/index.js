@@ -8,7 +8,6 @@ function PokemonListPage() {
 
   return (
     <div>
-      <h1>Pokemon List</h1>
       <PokemonList pokemon={pokemon} />
     </div>
   );
@@ -16,7 +15,7 @@ function PokemonListPage() {
 
 PokemonListPage.getLayout = function getLayout(page) {
   return (
-    <PokemonListLayout>
+    <PokemonListLayout title={"Pokemon List"}>
         {page}
     </PokemonListLayout>
   );

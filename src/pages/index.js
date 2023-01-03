@@ -4,17 +4,14 @@ import Button, {
   LoginButton,
 } from "../components/styled-components/Button/Button";
 import AuthForm from "../components/form/AuthForm/AuthForm";
+import PokemonCard from "../components/PokemonCard/PokemonCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main>
-      {/*
-        Example of a styled Component  
-          <LoginButton>Button</LoginButton> 
-        Login Button found in the components/styled-components/Button/Button.styles.js file 
-      */}
+      <PokemonCard title='Pikachu' image={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"} />
       <Button>
         <Link href={"/PokemonList"}>Pokemon List</Link>
       </Button>

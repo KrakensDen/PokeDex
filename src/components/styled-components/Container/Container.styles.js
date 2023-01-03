@@ -10,7 +10,7 @@ export const PokemonPageContainer = styled(PageContainer)`
   flex-direction: row;
 `
 
-export const AuthFormContainer = styled.div`
+export const AuthFormContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -5,30 +5,40 @@ import { AuthFormContainer } from "../../styled-components/Container/Container.s
 import { AuthTextInput } from "../../styled-components/TextInput/TextInput.styles";
 import styles from "./auth.module.css";
 
-const AuthForm = () => {
+
+const AuthForm = ({ submitUser}) => {
   return (
-    <AuthFormContainer>
+    <AuthFormContainer onSubmit={submitUser}>
       <div className={styles.formTitle}>
         <h1>Sign In</h1>
         <br />
-        <Image height={70} width={70} src={'/images/signin.png'} />
+        <Image height={70} width={70} src={"/images/signin.png"} />
         <br />
         <h4>Sign in with an existing account, or create new account.</h4>
       </div>
       <h3>
         <strong>Email: </strong>
       </h3>
-      <AuthTextInput name="email" id="email" type="email"></AuthTextInput>
+      <AuthTextInput
+        name="email"
+        id="email"
+        type="email"
+        autoComplete="email"
+        required
+      ></AuthTextInput>
       <br />
       <br />
       <h3>
         <strong>Password: </strong>
       </h3>
-      <AuthTextInput name="password" id="password" type="password"></AuthTextInput>
+      <AuthTextInput
+        name="password"
+        id="password"
+        type="password"
+      ></AuthTextInput>
       <br />
-      <LoginButton>Sign In</LoginButton>
+      <LoginButton type="submit">Sign In</LoginButton>
       <br />
-      
     </AuthFormContainer>
   );
 };

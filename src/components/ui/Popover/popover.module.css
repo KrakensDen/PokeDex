@@ -1,0 +1,28 @@
+
+.hamburgerpopover {
+  margin: 0.25rem;
+  border: 1px solid #222;
+  border-radius: 0.75rem;
+  background-color: rgba(49, 50, 58, 0.726);
+  color:azure;
+  padding: 0.75rem;
+  max-width: 300px;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.hamburgerpopover .popoverLink:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.popoverLink {
+  width: 100px;
+  text-align: center;
+}
+
+.popover {
+  --nextui--popoverBackground: #00000000 !important;
+}

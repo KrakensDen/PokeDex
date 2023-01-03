@@ -1,5 +1,6 @@
 import React from 'react'
 import { PageContainer } from '../components/styled-components/Container/Container.styles'
+import AppHead from '../layouts/AppHead'
 import Footer from '../layouts/Footer/Footer'
 import Header from '../layouts/Header/Header'
 
@@ -16,6 +17,7 @@ export default About
 About.getLayout = function PageLayout(page) {
   return (
     <>
+      <AppHead headTitle={'About Page'}/>
       <Header />
       <PageContainer>
       {page}

@@ -1,9 +1,9 @@
-import React from 'react'
-import Header from './Header/Header'
-import Footer from './Footer/Footer'
-import AppHead from './AppHead'
-import { PokemonPageContainer } from '../components/styled-components/Container/Container.styles'
-import SideBar from '../layouts/SideBar/SideBar';
+import React from "react";
+import Header from "./Navbar";
+import Footer from "./Footer/Footer";
+import AppHead from "./AppHead";
+import { PokemonPageContainer } from "../components/styled/Containers/Container.styles";
+import SideBar from "../layouts/SideBar/SideBar";
 
 const PokemonListLayout = ({ children, title, description }) => {
   return (
@@ -16,7 +16,7 @@ const PokemonListLayout = ({ children, title, description }) => {
       </PokemonPageContainer>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default PokemonListLayout
+export default PokemonListLayout;

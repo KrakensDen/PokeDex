@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import PokemonCard from "./PokemonCard/PokemonCard";
+import React from "react";
+import PokemonCard from "./styled/blocks/PokemonCard/PokemonCard";
 import { Grid } from "@nextui-org/react";
-import { Griffy } from "@next/font/google";
 
 function PokemonList({ pokemon }) {
   return (

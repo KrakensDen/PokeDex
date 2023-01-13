@@ -5,37 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/components/styled/blocks/Form/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/styled/blocks/Form/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/styled/elements/Button/Button.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/prismadb.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/api/auth/[...nextauth].js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/overview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/StandardizeColor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/variables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/PokemonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/PokemonCard/PokemonCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/PokemonCard/card.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/AuthForm/AuthForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/AuthForm/auth.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/__tests__/EmailInput.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled-components/Button/Button.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled-components/Button/Button.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled-components/Container/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/Containers/Container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled-components/Container/Container.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/Containers/Container.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled-components/TextInput/TextInput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled-components/TextInput/TextInput.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/AppLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/AppLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Navbar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Navbar/navbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/PokemonListLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/PokemonListLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sign-in.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sign-in.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +51,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="nates-edit" />
+    </force-push-targets>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="N:\_VSCode\pokedex-project\src\components\styled\blocks" />
@@ -108,7 +83,7 @@
       <workItem from="1673411519614" duration="4753000" />
       <workItem from="1673469699606" duration="12000" />
       <workItem from="1673567150678" duration="1862000" />
-      <workItem from="1673569028671" duration="1831000" />
+      <workItem from="1673569028671" duration="2175000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1673411356460</created>

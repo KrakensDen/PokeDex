@@ -1,30 +1,33 @@
-import React from 'react'
+import React from "react";
 import { Popover, Button } from "@nextui-org/react";
-import HamburgerBtn from '../../ui/HamburgerBtn/HamburgerBtn'
-import styles from './popover.module.css'
+import HamburgerBtn from "../../ui/HamburgerBtn/HamburgerBtn";
+import styles from "./popover.module.css";
 
 import Link from "next/link";
 
-const NAV_ITEMS = [
-  {
-    title: "Sign In",
-    href: "/sign-in",
-  },
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Settings",
-    href: "/settings",
-  },
-];
-
-
-const AppPopover = () => {
+const AppPopover = ({ items, session }) => {
+  if (session) {
+    items = [
+      {
+        title: "Logout",
+        href: "/api/auth/signout",
+      },
+      {
+        title: "Profile",
+        href: "/profile",
+      },
+      {
+        title: "About",
+        href: "/about",
+      },
+      {
+        title: "Settings",
+        href: "/settings",
+      },
+    ];
+  }
   return (
     <div>
-
       <Popover placement="left-top">
         <Popover.Trigger>
           <Button light auto>
@@ -33,18 +36,39 @@ const AppPopover = () => {
         </Popover.Trigger>
         <Popover.Content className={styles.popover}>
           <div className={styles.hamburgerpopover}>
-          {NAV_ITEMS.map((item) => (
-            <>
-            <Link className={styles.popoverLink} key={item.title} href={item.href}>
-              {item.title}
-            </Link>
-            </>
-          ))}
+            {items.map((item) => (
+              <>
+                <Link
+                  className={styles.popoverLink}
+                  key={item.title}
+                  href={item.href}
+                >
+                  {item.title}
+                </Link>
+              </>
+            ))}
           </div>
         </Popover.Content>
       </Popover>
     </div>
-  )
-}
+  );
+};
 
-export default AppPopover
+AppPopover.defaultProps = {
+  items: [
+    {
+      title: "Sign In",
+      href: "/sign-in",
+    },
+    {
+      title: "About",
+      href: "/about",
+    },
+    {
+      title: "Settings",
+      href: "/settings",
+    },
+  ],
+};
+
+export default AppPopover;

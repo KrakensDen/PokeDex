@@ -35,7 +35,7 @@ const POKEMON_TYPES = [
     type: "Flying",
   },
   {
-    type: "Phychic",
+    type: "Psychic",
   },
   {
     type: "Bug",
@@ -68,28 +68,23 @@ const SideBar = () => {
       <hr />
       <br />
       <Collapse.Group>
-      <Collapse className={styles.collapse} title="Types">
-        {POKEMON_TYPES.map((type) => {
-          return (
-            <>
-              <Link className={styles.link} href={"/PokemonList"} id={type.type}>
-                {type.type}
-              </Link><br />
-            </>
-          );
-        })}
-      </Collapse>
-      <Collapse title='Temp'>
-        <h4>Temp</h4>
-        <h4>Temp</h4>
-        <h4>Temp</h4>
-        <h4>Temp</h4>
-        <h4>Temp</h4>
-        <h4>Temp</h4>
-        <h4>Temp</h4>
-        <h4>Temp</h4>
-        <h4>Temp</h4>
-      </Collapse>
+        <Collapse title="Types">
+          {POKEMON_TYPES.map(({ type }, index) => {
+            return (
+              <>
+                <Link
+                  className={styles.link}
+                  href={"/PokemonList"}
+                  id={type}
+                  key={index}
+                >
+                  {type}
+                </Link>
+                <br />
+              </>
+            );
+          })}
+        </Collapse>
       </Collapse.Group>
     </div>
   );

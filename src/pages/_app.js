@@ -1,9 +1,9 @@
-import "../../styles/globals.css";
+import "../styles/globals.css";
 import { SSRProvider } from "@react-aria/ssr";
 import { SessionProvider } from "next-auth/react";
 import AppLayout from "../layouts/AppLayout";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
-import { theme } from "/styles/variables";
+import { theme } from "/src/styles/variables";
 
 const GlobalStyle = createGlobalStyle`
   :root {

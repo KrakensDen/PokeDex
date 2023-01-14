@@ -1,5 +1,5 @@
 import React from "react";
-import { PageContainer } from "../components/styled/Containers/Container.styles";
+import { PageContainer } from "../components/styled/containers/Container.styles";
 import AppHead from "../layouts/AppHead";
 import Footer from "../layouts/Footer/Footer";
 import Navbar from "../layouts/Navbar";
@@ -18,7 +18,7 @@ About.getLayout = function PageLayout(page) {
   return (
     <>
       <AppHead headTitle={"About Page"} />
-      <Navbar />
+      <Navbar title={"About Us"} />
       <PageContainer>{page}</PageContainer>
       <Footer />
     </>

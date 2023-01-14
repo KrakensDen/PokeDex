@@ -1,7 +1,7 @@
 import React from "react";
 import AppHead from "./AppHead";
 import Footer from "./Footer/Footer";
-import { PageContainer } from "../components/styled/Containers/Container.styles";
+import { PageContainer } from "../components/styled/containers/Container.styles";
 import Navbar from "./Navbar";
 
 const AppLayout = ({ children, title, description, headTitle }) => {

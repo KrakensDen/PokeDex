@@ -5,11 +5,11 @@ import { Grid } from "@nextui-org/react";
 function PokemonList({ pokemon }) {
   return (
     <div>
-      <Grid.Container gap={0.1} justify="center">
-        {pokemon.map((p) => {
+      <Grid.Container gap={1} justify="center">
+        {pokemon.map(({ image, name }, index) => {
           return (
-            <Grid>
-              <PokemonCard title={p.name} image={p.image} />
+            <Grid key={index}>
+              <PokemonCard key={name} title={name} image={image} />
             </Grid>
           );
         })}

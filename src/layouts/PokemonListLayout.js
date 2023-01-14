@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Navbar";
 import Footer from "./Footer/Footer";
 import AppHead from "./AppHead";
-import { PokemonPageContainer } from "../components/styled/Containers/Container.styles";
+import { PokemonPageContainer } from "../components/styled/containers/Container.styles";
 import SideBar from "../layouts/SideBar/SideBar";
 
 const PokemonListLayout = ({ children, title, description }) => {

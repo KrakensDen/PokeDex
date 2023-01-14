@@ -4,33 +4,40 @@ import generateHex, { invertColor } from "/src/utils/StandardizeColor";
 /**
  Props:
  - color = any built in html color will work and will change the background color of the main element * also will
-          automatically change the foreground color to the respective contrasted color.
-         (i.e. color={'white'} means the foreground will be black to allow for easy reading)
+ automatically change the foreground color to the respective contrasted color.
+ (i.e. color={'white'} means the foreground will be black to allow for easy reading)
  - glow = Turns the button into a neon sign version of the button with hover effects.
  - activated = turns the button into one that keeps a bottom border when clicked on, but it doesn't keep it when
-           clicked off if you want it to keep the border persistent then the href value of the button will tell it to
-            keep the border when it's on that route.
-**/
+ clicked off if you want it to keep the border persistent then the href value of the button will tell it to
+ keep the border when it's on that route.
+ **/
 
 // * Custom styles for the component
 export const StyledButton = styled.a.attrs({
-  id: "btn-default",
+  className: "btn-default-mvzx",
 })`
   position: relative;
   display: inline-block;
   z-index: 100;
   text-decoration: none;
-  padding: 7px 45px;
+  padding: ${(props) => (props.sm ? "5px 2px" : "7px 45px")};
   margin: 0 0.5rem;
   color: ${(props) =>
     props.color && typeof window !== "undefined"
-      ? invertColor(props.fgcolor.startsWith('#') ? props.fgcolor : generateHex(props.fgcolor), true)
+      ? invertColor(
+          props.fgcolor.startsWith("#")
+            ? props.fgcolor
+            : generateHex(props.fgcolor),
+          true
+        )
       : "#ffffffee"};
   cursor: pointer;
   border-radius: 0.75rem;
-  border: ${(props) => (props.color ? props.color : "var(--clr-neon)")} 0px solid;
+  border: ${(props) => (props.color ? props.color : "var(--clr-neon)")} 0px
+    solid;
   overflow: hidden;
-  background: ${(props) => (props.fgcolor ? props.fgcolor : "var(--default-bg-gradient)")};
+  background: ${(props) =>
+    props.fgcolor ? props.fgcolor : "var(--default-bg-gradient)"};
   user-select: none;
 
   transition: all 500ms ease-in-out;
@@ -44,18 +51,22 @@ export const StyledButton = styled.a.attrs({
     pointer-events: none;
   }
 
-  span {
-    position: absolute;
-    background: ${(props) =>
-      props.color && typeof window !== "undefined"
-        ? invertColor(generateHex(props.color), true) + "aa"
-        : "#ffffffaa"};
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    border-radius: 50%;
-    z-index: 200;
-    animation: animate 700ms linear infinite;
-  }
+  ${(props) =>
+    !props.sm &&
+    css`
+      span {
+        position: absolute;
+        background: ${(props) =>
+          props.color && typeof window !== "undefined"
+            ? invertColor(generateHex(props.color), true) + "aa"
+            : "#ffffffaa"};
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        border-radius: 50%;
+        z-index: 200;
+        animation: animate 700ms linear infinite;
+      }
+    `}
 
   ${(props) =>
     props.transparent &&
@@ -90,8 +101,8 @@ export const StyledButton = styled.a.attrs({
     css`
       border: 1px solid #222222bb;
     `}
-      
-      ${(props) =>
+
+  ${(props) =>
     props.glow &&
     css`
       font-size: 1.2rem;
@@ -100,11 +111,13 @@ export const StyledButton = styled.a.attrs({
       text-decoration: none;
       color: ${(props) => (props.color ? props.color : "var(--clr-neon)")};
       background: #00000000;
-      border: ${(props) => (props.color ? props.color : "var(--clr-neon)")} 0px solid;
+      border: ${(props) => (props.color ? props.color : "var(--clr-neon)")} 0px
+        solid;
       padding: 7px 30px;
       position: relative;
       z-index: 1;
-      text-shadow: 0 0 0.125em ${(props) => (props.color ? props.color : "var(--clr-neon)")},
+      text-shadow: 0 0 0.125em
+          ${(props) => (props.color ? props.color : "var(--clr-neon)")},
         0 0 0.25em currentColor;
 
       transition: all 500ms ease-in-out;
@@ -113,7 +126,8 @@ export const StyledButton = styled.a.attrs({
         pointer-events: none;
         content: "";
         position: absolute;
-        background: ${(props) => props.color ? props.color : "var(--clr-neon)"};
+        background: ${(props) =>
+          props.color ? props.color : "var(--clr-neon)"};
         top: 100%;
         left: 0;
         right: 0;
@@ -131,13 +145,15 @@ export const StyledButton = styled.a.attrs({
 
       &:focus,
       :hover {
-        background: ${(props) => (props.color ? props.color : "var(--clr-neon)")};
+        background: ${(props) =>
+          props.color ? props.color : "var(--clr-neon)"};
         color: ${(props) =>
           props.color && typeof document !== "undefined"
             ? invertColor(generateHex(props.color), true)
             : "var(--clr-bg)"};
         text-shadow: none;
-        box-shadow: 0 0 11px ${(props) => (props.color ? props.color : "var(--clr-neon)")};
+        box-shadow: 0 0 11px
+          ${(props) => (props.color ? props.color : "var(--clr-neon)")};
       }
 
       &:focus::before,
@@ -154,11 +170,10 @@ export const StyledButton = styled.a.attrs({
         props.activated &&
         css`
           &[active] {
-            border-bottom: 5px solid ${(props) => (props.color ? props.color : "var(--clr-neon)")};
+            border-bottom: 5px solid
+              ${(props) => (props.color ? props.color : "var(--clr-neon)")};
             box-shadow: 0 9px 8px -8px ${props.color};
           }
         `}
     `}
-
-
 `;

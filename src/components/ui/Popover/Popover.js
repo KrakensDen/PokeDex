@@ -4,25 +4,42 @@ import HamburgerBtn from "../../ui/HamburgerBtn/HamburgerBtn";
 import styles from "./popover.module.css";
 
 import Link from "next/link";
+import {
+  AiOutlineInfo,
+  AiOutlineLogout,
+  AiOutlineSetting,
+} from "react-icons/ai";
 
 const AppPopover = ({ items, session }) => {
   if (session) {
     items = [
       {
-        title: "Logout",
-        href: "/api/auth/signout",
-      },
-      {
+        image: (
+          <img
+            style={{ borderRadius: 5 + "px" }}
+            height={20}
+            width={20}
+            src={session.user.image}
+            alt={`${session.user.name} pic`}
+          />
+        ),
         title: "Profile",
         href: "/profile",
       },
       {
+        image: <AiOutlineInfo />,
         title: "About",
         href: "/about",
       },
       {
+        image: <AiOutlineSetting />,
         title: "Settings",
         href: "/settings",
+      },
+      {
+        image: <AiOutlineLogout />,
+        title: "Logout",
+        href: "/api/auth/signout",
       },
     ];
   }
@@ -39,10 +56,12 @@ const AppPopover = ({ items, session }) => {
             {items.map((item) => (
               <>
                 <Link
+                  style={{ display: "flex", justifyContent: "space-around" }}
                   className={styles.popoverLink}
                   key={item.title}
                   href={item.href}
                 >
+                  {item.image}
                   {item.title}
                 </Link>
               </>

@@ -1,28 +1,28 @@
 .sidebar {
-  max-width: 150px;
-  min-width: 150px;
-  background-color: #161b22ee;
-  color:#aaadb6ee;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  overflow-y: auto;
+    max-width: 150px;
+    min-width: 150px;
+    background-color: #161b22ee;
+    color: #aaadb6ee;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    overflow-y: auto;
 }
 
 .sidebar a {
-  width: 100px;
-  border: 1px solid rgba(255, 255, 255, 0);
-  border-radius: 0.25em;
-  padding: 0.15em;
-  margin: 0.15em;
-  transition: 0.25s all ease-in-out;
+    width: 100px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 0.25em;
+    padding: 0.15em;
+    margin: 0.15em;
+    transition: 0.25s all ease-in-out;
 }
 
 .sidebar a:hover {
-  border: 1px solid rgba(255, 255, 255, 0.548);
+    border: 1px solid rgba(255, 255, 255, 0.548);
 
 }
 
 .link {
-  width: inherit;
+    width: inherit;
 }

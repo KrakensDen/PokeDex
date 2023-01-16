@@ -6,12 +6,14 @@ import Navbar from "./Navbar";
 
 const AppLayout = ({ children, title, description, headTitle }) => {
   return (
-    <>
-      <AppHead headTitle={headTitle} description={description} />
-      <Navbar title={title} />
-      <PageContainer>{children}</PageContainer>
-      <Footer />
-    </>
+    <div style={{ backgroundImage: 'url("/images/BG.jpg")' }}>
+      <div style={{ background: "#1c1c1cbb", color: "#ddddddee" }}>
+        <AppHead headTitle={headTitle} description={description} />
+        <Navbar title={title} />
+        <PageContainer>{children}</PageContainer>
+        <Footer />
+      </div>
+    </div>
   );
 };
 

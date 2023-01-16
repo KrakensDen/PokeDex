@@ -7,15 +7,17 @@ import SideBar from "../layouts/SideBar/SideBar";
 
 const PokemonListLayout = ({ children, title, description }) => {
   return (
-    <>
-      <AppHead headTitle={"PokeList"} description={description} />
-      <Header title={title} />
-      <PokemonPageContainer>
-        <SideBar />
-        {children}
-      </PokemonPageContainer>
-      <Footer />
-    </>
+    <div style={{ backgroundImage: 'url("/images/BG.jpg")' }}>
+      <div style={{ background: "#1c1c1cbb", color: "#ddddddee" }}>
+        <AppHead headTitle={"PokeList"} description={description} />
+        <Header title={title} />
+        <PokemonPageContainer>
+          <SideBar />
+          {children}
+        </PokemonPageContainer>
+        <Footer />
+      </div>
+    </div>
   );
 };
 

@@ -4,10 +4,12 @@ import Tilt from "react-parallax-tilt";
 import * as S from "./PokemonCard.styles";
 import pokemon from "../../../__tests__/charmander.json";
 
-const PokemonCard = ({ title, image }) => {
+const PokemonCard = ({ title, image, type }) => {
+  title = title.charAt(0).toUpperCase() + title.slice(1);
   return (
     <S.CardContainer>
       <Tilt
+        scale={0.97}
         glareColor={"rgba(255,238,158,0.70)"}
         glareEnable={true}
         tiltMaxAngleX={10}
@@ -15,9 +17,10 @@ const PokemonCard = ({ title, image }) => {
       >
         <S.Card>
           <S.TopContainer>
-            <S.Type>{pokemon.types[0].type.name}</S.Type>
+            <S.Type>{type ?? pokemon.types[0].type.name}</S.Type>
             <S.Name>
-              {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+              {title ??
+                pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
             </S.Name>
           </S.TopContainer>
           <S.PokeImg>

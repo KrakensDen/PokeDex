@@ -63,7 +63,7 @@ const POKEMON_TYPES = [
 const SideBar = () => {
   return (
     <div className={styles.sidebar}>
-      <h1>Filter</h1>
+      <h1 align={"center"}>Filter</h1>
       <br />
       <hr />
       <br />

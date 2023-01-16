@@ -9,12 +9,15 @@ export const Card = styled.div`
   box-shadow: 5px 5px 10px #22222255;
   width: calc(${(props) => props.theme.card.width} / 2);
   height: calc(${(props) => props.theme.card.height} / 2);
-  background: radial-gradient(
-    circle at center,
-    #888888aa 0,
-    #555555cc,
-    #222222dd 100%
-  );
+  background-image: url("/images/PokemonCardBG.png");
+  background-size: 450px;
+  backdrop-filter: sepia(60%);
+  //background: radial-gradient(
+  //  circle at center,
+  //  #888888aa 0,
+  //  #555555cc,
+  //  #222222dd 100%
+  //);
   border: 5px solid rgb(255, 239, 132);
   outline: 1px solid #22222233;
   border-radius: 0.4rem;
@@ -30,8 +33,7 @@ export const Type = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  height: 10px;
-  width: 24px;
+  padding: 0 5px;
   top: 3px;
   left: 4px;
   font-family: Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
@@ -90,7 +92,7 @@ export const PokeImg = styled.div`
     z-index: -1;
     margin: -4px; /* !importanté */
     border-radius: inherit; /* !importanté */
-    background: linear-gradient(to right, #00e0ff, #ff26f4);
+    background: linear-gradient(to bottom right, #ffdf6c, #fdcea9);
   }
 
   img {

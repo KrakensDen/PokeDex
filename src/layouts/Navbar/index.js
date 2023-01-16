@@ -2,8 +2,7 @@ import React from "react";
 import styles from "./navbar.module.css";
 import Brand from "../../components/ui/Brand/Brand";
 import Popover from "../../components/ui/Popover/Popover";
-import { signIn, useSession } from "next-auth/react";
-import Button from "../../components/styled/elements/Button";
+import { useSession } from "next-auth/react";
 
 const Navbar = ({ title }) => {
   const { data: session, status } = useSession();
@@ -12,17 +11,9 @@ const Navbar = ({ title }) => {
     <nav className={styles.nav}>
       <Brand />
       <h1>{title}</h1>
-      {!session ? (
-        <div>
-          <Button sm transparent onClick={signIn}>
-            Sign In
-          </Button>
-        </div>
-      ) : (
-        <div>
-          <Popover session={session} />
-        </div>
-      )}
+      <div>
+        <Popover session={session} />
+      </div>
     </nav>
   );
 };

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { PageContainer } from "../components/styled/containers/Container.styles";
 import AppHead from "../layouts/AppHead";
 import Footer from "../layouts/Footer/Footer";
 import Navbar from "../layouts/Navbar";
 
 const About = () => {
+  const [uploading, setUploading] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+  const [selectedFile, setSelectedFile] = useState();
+
   return (
     <div>
       <h1 className="content">About</h1>

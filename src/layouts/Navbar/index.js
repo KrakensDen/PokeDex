@@ -6,7 +6,6 @@ import { useSession } from "next-auth/react";
 
 const Navbar = ({ title }) => {
   const { data: session, status } = useSession();
-
   return (
     <nav className={styles.nav}>
       <Brand />

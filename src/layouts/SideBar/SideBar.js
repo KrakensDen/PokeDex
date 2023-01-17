@@ -71,7 +71,7 @@ const SideBar = () => {
         <Collapse title="Types">
           {POKEMON_TYPES.map(({ type }, index) => {
             return (
-              <>
+              <div key={index}>
                 <Link
                   className={styles.link}
                   href={"/PokemonList"}
@@ -80,8 +80,7 @@ const SideBar = () => {
                 >
                   {type}
                 </Link>
-                <br />
-              </>
+              </div>
             );
           })}
         </Collapse>
@@ -89,5 +88,4 @@ const SideBar = () => {
     </div>
   );
 };
-
 export default SideBar;

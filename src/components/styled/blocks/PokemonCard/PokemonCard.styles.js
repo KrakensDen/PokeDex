@@ -1,14 +1,25 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const CardContainer = styled.div`
   width: calc(${(props) => props.theme.card.width} / 2);
   height: calc(${(props) => props.theme.card.height} / 2);
+
+  ${(props) =>
+    props.active &&
+    css`
+      position: absolute;
+      top: 5vh;
+      right: 25%;
+      width: calc(${(props) => props.theme.card.width} * 2);
+      height: calc(${(props) => props.theme.card.height} * 2);
+      z-index: 1000;
+    `}
 `;
 
 export const Card = styled.div`
   box-shadow: 5px 5px 10px #22222255;
-  width: calc(${(props) => props.theme.card.width} / 2);
-  height: calc(${(props) => props.theme.card.height} / 2);
+  width: inherit;
+  height: inherit;
   background-image: url("/images/PokemonCardBG.png");
   background-size: 450px;
   backdrop-filter: sepia(60%);
@@ -44,12 +55,27 @@ export const Type = styled.div`
   color: #222222;
   background: azure;
   border-radius: 0.3rem;
+
+  ${(props) =>
+    props.active &&
+    css`
+      font-size: 20px;
+      border-radius: 3rem;
+    `}
 `;
 
 export const Name = styled.div`
+  font-size: clamp(0.5rem, 1rem, 3rem);
+  color: #222222;
   pointer-events: none;
   font-family: Segoe UI, sans-serif;
   font-weight: 600;
+
+  ${(props) =>
+    props.active &&
+    css`
+      font-size: 3.5rem;
+    `}
 `;
 
 export const TopContainer = styled.div`
@@ -64,6 +90,12 @@ export const TopContainer = styled.div`
 `;
 
 export const PokeImg = styled.div`
+  ${(props) =>
+    props.active &&
+    css`
+      width: calc(${(props) => props.theme.card.width} * 1.5) !important;
+      height: calc(${(props) => props.theme.card.height} * 0.65) !important;
+    `}
   width: calc(235px / 2);
   height: calc(170px / 2);
   margin-top: 7px;
@@ -102,5 +134,11 @@ export const PokeImg = styled.div`
     height: inherit;
     width: inherit;
     object-fit: cover;
+
+    ${(props) =>
+      props.active &&
+      css`
+        top: 30px;
+      `}
   }
 `;

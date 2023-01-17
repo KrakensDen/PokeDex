@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-export const SForm = styled.form`
+export const Form = styled.form`
   width: 100%;
   font-family: ${(props) => props.theme.fontFamily};
   background: whitesmoke;

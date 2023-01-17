@@ -5,32 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="Profile page made with User info within session. also made a quick api route to grab to accountCreated date that I added to the schema.">
-      <change afterPath="$PROJECT_DIR$/public/images/BG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/PokemonCardBG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/svg/lvl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/ProifleHeader.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/styled/containers/Flex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/styled/elements/ProgressBar/ProgressBar.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/styled/elements/ProgressBar/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/api/accountCreated.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/styled/blocks/SettingModal/SettingModal.styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/styled/blocks/SettingModal/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/Form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/Form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/Form/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/Form/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/PokemonCard/PokemonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/PokemonCard/PokemonCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/PokemonCard/PokemonCard.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/PokemonCard/PokemonCard.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled/containers/Container.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/containers/Container.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/ProifleHeader.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/ProifleHeader.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/Popover/Popover.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Popover/Popover.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/AppLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/AppLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Popover/popover.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Popover/popover.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Navbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Navbar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/PokemonListLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/PokemonListLayout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/SideBar/sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/SideBar/sidebar.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/overview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sign-in.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sign-in.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "N:/_VSCode/CS50-FinalProject/tip-tracker",
+    "last_opened_file_path": "N:/_VSCode/pokedex-project/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,6 +77,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="N:\_VSCode\pokedex-project\public" />
       <recent name="N:\_VSCode\pokedex-project\src\components\styled\elements" />
       <recent name="N:\_VSCode\pokedex-project\public\images" />
       <recent name="N:\_VSCode\pokedex-project\src\components\styled\blocks" />
@@ -118,6 +113,9 @@
       <workItem from="1673724085270" duration="14939000" />
       <workItem from="1673818240293" duration="161000" />
       <workItem from="1673825085293" duration="15645000" />
+      <workItem from="1673911570507" duration="11844000" />
+      <workItem from="1673931025498" duration="93000" />
+      <workItem from="1673989745028" duration="3588000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1673411356460</created>

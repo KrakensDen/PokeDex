@@ -40,6 +40,7 @@ export const ProfileInfo = styled.div`
 `;
 export const TrainerLvl = styled.span`
   display: flex;
+  position: relative;
   justify-content: flex-start;
   align-items: center;
   margin: 5px;
@@ -60,6 +61,7 @@ export const TrainerLvl = styled.span`
 
   }
 
+
   @keyframes anim {
     100% {
       stroke-dashoffset: ${(props) => 125 - props.progress * 0.01 * 125};
@@ -68,10 +70,11 @@ export const TrainerLvl = styled.span`
 
 export const AccountDate = styled.div`
   margin: 1rem;
+  pointer-events: none;
 
   span {
     background-color: #424754;
-    padding: 3px 8px 3px 8px;
+    padding: 3px 11px 3px 11px;
     border-radius: 5px;
   }
 `;

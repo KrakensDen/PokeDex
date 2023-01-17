@@ -3,7 +3,8 @@ import Footer from "../layouts/Footer/Footer";
 import AppHead from "../layouts/AppHead";
 import Form from "/src/components/styled/blocks/Form";
 import { FormContainer } from "../components/styled/containers/FormContainer";
-import { getSession, signIn } from "next-auth/react";
+import { getProviders, getSession, signIn } from "next-auth/react";
+import Button from "../components/styled/elements/Button";
 
 // * This is for handling the user submission
 // * Grabs the email and password form the Form component.
@@ -16,13 +17,13 @@ const onSubmitHandler = (form) => {
 };
 const onSubmitHandlerEmail = (form) => {
   console.log("Sign in submitted ", form);
-  signIn("email").then((res) => {
+  signIn("email", { email: form.email }).then((res) => {
     console.log(res);
   });
 };
 
 // * The elements rendered in between the Layout weather that be The AppLayout or the individual page layout.
-const SignUp = () => {
+const SignUp = ({ providers }) => {
   return (
     <FormContainer>
       <Form
@@ -70,6 +71,17 @@ const SignUp = () => {
         redirect={null}
         onSubmit={onSubmitHandlerEmail}
       />
+      <h1>- OR -</h1>
+
+      <>
+        {Object.values(providers).map((provider) => (
+          <div key={provider.name}>
+            <Button color={"#20f26c"} onClick={() => signIn(provider.id)}>
+              Sign in with {provider.name}
+            </Button>
+          </div>
+        ))}
+      </>
     </FormContainer>
   );
 };
@@ -94,6 +106,7 @@ SignUp.getLayout = function PageLayout(page) {
 
 export async function getServerSideProps(context) {
   const session = await getSession(context);
+  const providers = await getProviders();
 
   if (session) {
     return {
@@ -105,6 +118,8 @@ export async function getServerSideProps(context) {
   }
 
   return {
-    props: {},
+    props: {
+      providers,
+    },
   };
 }

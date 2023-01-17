@@ -1,9 +1,10 @@
 import "../styles/globals.css";
 import { SSRProvider } from "@react-aria/ssr";
-import { SessionProvider } from "next-auth/react";
+import { SessionProvider, useSession } from "next-auth/react";
 import AppLayout from "../layouts/AppLayout";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { theme } from "/src/styles/variables";
+import { useState, useEffect } from "react";
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -38,31 +39,44 @@ export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }) {
-  // * This is if the component has a getLayout method attached to it, you can look at an example in the /about and /sign-in page
-  if (Component.getLayout) {
+  const [showChild, setShowChild] = useState(false);
+  useEffect(() => {
+    setShowChild(true);
+  }, []);
+
+  if (!showChild) {
+    return null;
+  }
+
+  if (typeof window === "undefined") {
+    return <></>;
+  } else {
+    // * This is if the component has a getLayout method attached to it, you can look at an example in the /about and /sign-in page
+    if (Component.getLayout) {
+      return (
+        <SessionProvider session={session}>
+          <SSRProvider>
+            <ThemeProvider theme={theme}>
+              <GlobalStyle />
+              {Component.getLayout(<Component {...pageProps} />)}
+            </ThemeProvider>
+          </SSRProvider>
+        </SessionProvider>
+      );
+    }
+
+    //* This is the App wide Layout and Component
     return (
       <SessionProvider session={session}>
         <SSRProvider>
           <ThemeProvider theme={theme}>
             <GlobalStyle />
-            {Component.getLayout(<Component {...pageProps} />)}
+            <AppLayout title={"PokeDex"}>
+              <Component {...pageProps} />
+            </AppLayout>
           </ThemeProvider>
         </SSRProvider>
       </SessionProvider>
     );
   }
-
-  //* This is the App wide Layout and Component
-  return (
-    <SessionProvider session={session}>
-      <SSRProvider>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <AppLayout title={"PokeDex"}>
-            <Component {...pageProps} />
-          </AppLayout>
-        </ThemeProvider>
-      </SSRProvider>
-    </SessionProvider>
-  );
 }

@@ -1,28 +1,45 @@
 import React from "react";
 import Image from "next/image";
 import * as S from "./ProifleHeader.styles";
-import { AiFillEdit } from "react-icons/ai";
+import { AiFillEdit, AiOutlineUser } from "react-icons/ai";
 
-const ProfileHeader = ({ userImage, userName, userLvl, accountCreated }) => {
-  const EditProfileHandler = () => {
-    console.log("Editing Profile");
-  };
+const ProfileHeader = ({
+  userImage,
+  userName,
+  userLvl,
+  accountCreated,
+  editingProfile,
+}) => {
   return (
     <S.ProfileHead>
       <S.ProfileImg>
-        <Image
-          width={90}
-          height={90}
-          src={userImage}
-          alt={`Profile Picture for ${userName}`}
+        {userImage ? (
+          <Image
+            width={90}
+            height={90}
+            src={userImage}
+            alt={`Profile Picture for ${userName}`}
+          />
+        ) : (
+          <Image
+            width={85}
+            height={85}
+            src={"/user.png"}
+            alt={"User Img Placeholder"}
+          />
+        )}
+        <AiFillEdit
+          style={{
+            position: "relative",
+            top: "-89px",
+            left: "5px",
+            cursor: "pointer",
+          }}
+          onClick={editingProfile}
         />
       </S.ProfileImg>
-      <AiFillEdit
-        style={{ position: "absolute", margin: 3 + "px", cursor: "pointer" }}
-        onClick={EditProfileHandler}
-      />
       <S.ProfileInfo>
-        <S.ProfileName>{userName}</S.ProfileName>
+        <S.ProfileName>{userName ? userName : ""}</S.ProfileName>
         <S.TrainerLvl progress={(userLvl % 1) * 100}>
           <h4>LVL:&nbsp;</h4>
           <svg
@@ -40,7 +57,7 @@ const ProfileHeader = ({ userImage, userName, userLvl, accountCreated }) => {
               strokeWidth="5"
               strokeLinecap="round"
             />
-            <text x="16" y="30" fill="white">
+            <text x="40%" y="60%" fill="white">
               {Math.floor(userLvl)}
             </text>
           </svg>

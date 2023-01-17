@@ -5,10 +5,12 @@ import {
   getCsrfToken,
   getSession,
 } from "next-auth/react";
+import Image from "next/image";
 
 export default function CamperVanPage() {
   const { data: session, status } = useSession();
   const userEmail = session?.user.email;
+  console.log(session);
 
   async function clickHandler() {
     const session = await getSession();
@@ -32,15 +34,15 @@ export default function CamperVanPage() {
         <button onClick={csrfToken}>csrf Token</button>
 
         <div style={{ display: "flex" }}>
-          {session?.user.image && (
-            <img
+          {session.user.image && (
+            <Image
               style={{
-                width: 40 + "px",
-                height: 40 + "px",
                 borderRadius: 50 + "%",
               }}
-              src={session?.user.image}
-              alt={"user Image"}
+              height={40}
+              width={40}
+              src={session.user.image}
+              alt={`${session.user.name} Profile Picture`}
             />
           )}
           <p>Signed in as {userEmail}</p>

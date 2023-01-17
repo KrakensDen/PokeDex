@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 import Button from "../../elements/Button";
-import {
-  SForm,
-  FormTitle,
-  FormControl,
-  Label,
-  Input,
-  RedirectLabel,
-  Redirect,
-  RedirectLink,
-} from "./styles";
+import * as S from "./styles";
 
 const prepareForm = (formArr) => {
   return formArr.reduce((r, v) => ({ ...r, [v.name]: "" }), {});
@@ -28,13 +19,18 @@ const Form = ({ title, formArr, submitBtn, onSubmit, redirect }) => {
   };
 
   return (
-    <SForm autoComplete="off">
-      <FormTitle>{title}</FormTitle>
+    <S.Form autoComplete="off">
+      <S.FormTitle>{title}</S.FormTitle>
       {formArr.map(({ label, name, type }, index) => (
-        <FormControl key={index}>
-          <Label>{label}</Label>
-          <Input name={name} type={type} value={form.name} onChange={(e) => onChangeHandler(e)} />
-        </FormControl>
+        <S.FormControl key={index}>
+          <S.Label>{label}</S.Label>
+          <S.Input
+            name={name}
+            type={type}
+            value={form.name}
+            onChange={(e) => onChangeHandler(e)}
+          />
+        </S.FormControl>
       ))}
       <Button
         as="button"
@@ -43,17 +39,19 @@ const Form = ({ title, formArr, submitBtn, onSubmit, redirect }) => {
           onSubmitHandler(e);
         }}
         color="#23a9f2"
-        style={{ margin: 1.5 +'rem' , width: 60 + "%" }}
+        style={{ margin: 1.5 + "rem", width: 60 + "%" }}
       >
         {submitBtn}
       </Button>
       {redirect && (
-        <Redirect>
-          <RedirectLabel>{redirect.label}&emsp;</RedirectLabel>
-          <RedirectLink href={redirect.link.to}>{redirect.link.label}</RedirectLink>
-        </Redirect>
+        <S.Redirect>
+          <S.RedirectLabel>{redirect.label}&emsp;</S.RedirectLabel>
+          <S.RedirectLink href={redirect.link.to}>
+            {redirect.link.label}
+          </S.RedirectLink>
+        </S.Redirect>
       )}
-    </SForm>
+    </S.Form>
   );
 };
 

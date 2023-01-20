@@ -64,7 +64,7 @@ const AppPopover = ({ items, session }) => {
           <div className={styles.hamburgerpopover}>
             {items.map((item) => (
               <Link
-                style={{ display: "flex", justifyContent: "space-around" }}
+                style={{ display: "flex", justifyContent: "space-between" }}
                 className={styles.popoverLink}
                 key={item.title}
                 href={item.href}

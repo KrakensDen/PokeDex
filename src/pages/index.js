@@ -1,6 +1,7 @@
 import Button from "../components/styled/elements/Button";
 import PokemonCard from "../components/styled/blocks/PokemonCard/PokemonCard";
 import { useState } from "react";
+import pokemon from "./../components/__tests__/tapu-koko.json";
 
 export default function Home() {
   const [active, setActive] = useState(false);
@@ -10,15 +11,7 @@ export default function Home() {
   };
   return (
     <main>
-      <PokemonCard
-        onClick={onClickCard}
-        active={active}
-        title="Pikachu"
-        type="Electric"
-        image={
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
-        }
-      />
+      <PokemonCard onClick={onClickCard} active={active} />
 
       <Button href={"/PokemonList"}>Pokemon List</Button>
       <Button href={"/overview"}>Auth Testing</Button>

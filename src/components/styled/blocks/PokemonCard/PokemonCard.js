@@ -2,16 +2,14 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import * as S from "./PokemonCard.styles";
-import pokemon from "../../../__tests__/charmander.json";
+import tapu from "./../../../__tests__/tapu-koko.json";
 
-const PokemonCard = ({ title, image, type }) => {
-  title = title.charAt(0).toUpperCase() + title.slice(1);
+const PokemonCard = ({ pokemon }) => {
   const [active, setActive] = useState(false);
 
   const onClickCard = () => {
     setActive(!active);
   };
-
   return (
     <S.CardContainer onClick={onClickCard} active={active}>
       <Tilt
@@ -25,20 +23,32 @@ const PokemonCard = ({ title, image, type }) => {
         <S.Card>
           <S.TopContainer>
             <S.Type active={active}>
-              {type ?? pokemon.types[0].type.name}
+              {pokemon.types.map((type) => (
+                <span>{type.type.name}</span>
+              ))}
             </S.Type>
             <S.Name active={active}>
-              {title ??
-                pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+              {pokemon.name
+                ? pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
+                : ""}
             </S.Name>
           </S.TopContainer>
           <S.PokeImg active={active}>
-            <Image alt={`${title} Card`} height={120} width={120} src={image} />
+            <Image
+              alt={`${pokemon.name} Card`}
+              height={120}
+              width={120}
+              src={pokemon.sprites.front_default}
+            />
           </S.PokeImg>
         </S.Card>
       </Tilt>
     </S.CardContainer>
   );
+};
+
+PokemonCard.defaultProps = {
+  pokemon: tapu,
 };
 
 export default PokemonCard;

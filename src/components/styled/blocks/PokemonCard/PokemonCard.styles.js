@@ -7,9 +7,10 @@ export const CardContainer = styled.div`
   ${(props) =>
     props.active &&
     css`
-      position: absolute;
+      position: fixed;
       top: 5vh;
       right: 25%;
+
       width: calc(${(props) => props.theme.card.width} * 2);
       height: calc(${(props) => props.theme.card.height} * 2);
       z-index: 1000;
@@ -41,20 +42,21 @@ export const Type = styled.div`
   pointer-events: none;
 
   display: flex;
-  align-items: center;
+  align-self: flex-start;
   justify-content: center;
-  position: absolute;
-  padding: 0 5px;
-  top: 3px;
-  left: 4px;
-  font-family: Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-style: italic;
-  font-size: 8px;
-  font-weight: 600;
-  color: #222222;
-  background: azure;
-  border-radius: 0.3rem;
+
+  span {
+    padding: 0 5px;
+    margin: 0 3px 0 0;
+    font-family: Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-style: italic;
+    font-size: 8px;
+    font-weight: 600;
+    color: #222222;
+    background: azure;
+    border-radius: 0.3rem;
+  }
 
   ${(props) =>
     props.active &&
@@ -67,6 +69,8 @@ export const Type = styled.div`
 export const Name = styled.div`
   font-size: clamp(0.5rem, 1rem, 3rem);
   color: #222222;
+  align-self: center;
+
   pointer-events: none;
   font-family: Segoe UI, sans-serif;
   font-weight: 600;
@@ -82,8 +86,8 @@ export const TopContainer = styled.div`
   position: relative;
   top: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
   background: #d9c853;
   height: 15%;
   width: 100%;

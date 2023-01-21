@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="Updated and fixed the profile when logged in with an account with missing information. also configured the Custom Sign in page and the hamburger popover to be dynamic.">
-      <change afterPath="$PROJECT_DIR$/src/components/__tests__/tapu-koko.json" afterDir="false" />
+    <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="Updated the PokemonList/index.js to fetch the pokemon data from pokeapi.io and then passes it to the pokemonList component that then displays each pokemon in a PokemonCard Grid.">
+      <change afterPath="$PROJECT_DIR$/public/gif/Multi-Gradient.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/unknown-pokemon-png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/NewPokeCard.styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/__tests__/ToolTip/ToolTip.styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/__tests__/ToolTip/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/__tests__/types.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/types/[typeid].js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/types/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PokemonList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/PokemonCard/PokemonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/PokemonCard/PokemonCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/PokemonCard/PokemonCard.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/PokemonCard/PokemonCard.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/Popover/Popover.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Popover/Popover.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/PokemonList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PokemonList/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +54,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;N:/_VSCode/pokedex-project/public&quot;,
+    &quot;last_opened_file_path&quot;: &quot;N:/_VSCode/pokedex-project/public/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -66,17 +73,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="N:\_VSCode\pokedex-project\public\images" />
       <recent name="N:\_VSCode\pokedex-project\public" />
       <recent name="N:\_VSCode\pokedex-project\src\components\styled\elements" />
-      <recent name="N:\_VSCode\pokedex-project\public\images" />
       <recent name="N:\_VSCode\pokedex-project\src\components\styled\blocks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="N:\_VSCode\pokedex-project\public\gif" />
+      <recent name="N:\_VSCode\pokedex-project\src\components\__tests__" />
+      <recent name="N:\_VSCode\pokedex-project\src\components\__tests__\NewPokeCard" />
       <recent name="N:\_VSCode\pokedex-project\public\images" />
       <recent name="N:\_VSCode\pokedex-project\src" />
-      <recent name="N:\_VSCode\pokedex-project\src\components\styled\blocks" />
-      <recent name="N:\_VSCode\pokedex-project\src\components\styled\elements" />
-      <recent name="N:\_VSCode\pokedex-project\src\components\styled" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -108,7 +115,11 @@
       <workItem from="1674002338024" duration="4000" />
       <workItem from="1674006911174" duration="3000" />
       <workItem from="1674006936293" duration="37000" />
-      <workItem from="1674177363264" duration="11136000" />
+      <workItem from="1674177363264" duration="13659000" />
+      <workItem from="1674249314444" duration="2971000" />
+      <workItem from="1674264145580" duration="2771000" />
+      <workItem from="1674267225681" duration="20655000" />
+      <workItem from="1674337568666" duration="3896000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1673411356460</created>
@@ -131,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673736846719</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated the PokemonList/index.js to fetch the pokemon data from pokeapi.io and then passes it to the pokemonList component that then displays each pokemon in a PokemonCard Grid.">
+      <created>1674188672168</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674188672168</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +170,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="Made the Pokemon Cards A little more robust, made them into styled-components. Also Started adding features to The logout and sign-in pages." />
     <MESSAGE value="Profile page made with User info within session. also made a quick api route to grab to accountCreated date that I added to the schema." />
-    <option name="LAST_COMMIT_MESSAGE" value="Profile page made with User info within session. also made a quick api route to grab to accountCreated date that I added to the schema." />
+    <MESSAGE value="Updated the PokemonList/index.js to fetch the pokemon data from pokeapi.io and then passes it to the pokemonList component that then displays each pokemon in a PokemonCard Grid." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the PokemonList/index.js to fetch the pokemon data from pokeapi.io and then passes it to the pokemonList component that then displays each pokemon in a PokemonCard Grid." />
   </component>
 </project>

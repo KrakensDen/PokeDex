@@ -1,0 +1,74 @@
+{
+  "bug": {
+    "img": "https://archives.bulbagarden.net/media/upload/9/9c/Bug_icon_SwSh.png",
+    "color": "#91c03f"
+  },
+  "dark": {
+    "img": "https://archives.bulbagarden.net/media/upload/d/d5/Dark_icon_SwSh.png",
+    "color": "#595265"
+  },
+  "dragon": {
+    "img": "https://archives.bulbagarden.net/media/upload/7/70/Dragon_icon_SwSh.png",
+    "color": "#176fc2"
+  },
+  "electric": {
+    "img": "https://archives.bulbagarden.net/media/upload/7/7b/Electric_icon_SwSh.png",
+    "color": "#f2d24b"
+  },
+  "fairy": {
+    "img": "https://archives.bulbagarden.net/media/upload/c/c6/Fairy_icon_SwSh.png",
+    "color": "#ea93e4"
+  },
+  "fighting": {
+    "img": "https://archives.bulbagarden.net/media/upload/3/3b/Fighting_icon_SwSh.png",
+    "color": "#cc4068"
+  },
+  "fire": {
+    "img": "https://archives.bulbagarden.net/media/upload/a/ab/Fire_icon_SwSh.png",
+    "color": "#fc9e5a"
+  },
+  "flying": {
+    "img": "https://archives.bulbagarden.net/media/upload/b/b5/Flying_icon_SwSh.png",
+    "color": "#92aadc"
+  },
+  "ghost": {
+    "img": "https://archives.bulbagarden.net/media/upload/0/01/Ghost_icon_SwSh.png",
+    "color": "#536aab"
+  },
+  "grass": {
+    "img": "https://archives.bulbagarden.net/media/upload/a/a8/Grass_icon_SwSh.png",
+    "color": "#67bb62"
+  },
+  "ground": {
+    "img": "https://archives.bulbagarden.net/media/upload/2/27/Ground_icon_SwSh.png",
+    "color": "#d77849"
+  },
+  "ice": {
+    "img": "https://archives.bulbagarden.net/media/upload/1/15/Ice_icon_SwSh.png",
+    "color": "#79cfc2"
+  },
+  "normal": {
+    "img": "https://archives.bulbagarden.net/media/upload/9/95/Normal_icon_SwSh.png",
+    "color": "#929aa2"
+  },
+  "poison": {
+    "img": "https://archives.bulbagarden.net/media/upload/8/8d/Poison_icon_SwSh.png",
+    "color": "#ab6dc6"
+  },
+  "psychic": {
+    "img": "https://archives.bulbagarden.net/media/upload/7/73/Psychic_icon_SwSh.png",
+    "color": "#f67377"
+  },
+  "rock": {
+    "img": "https://archives.bulbagarden.net/media/upload/1/11/Rock_icon_SwSh.png",
+    "color": "#c8b88f"
+  },
+  "steel": {
+    "img": "https://archives.bulbagarden.net/media/upload/0/09/Steel_icon_SwSh.png",
+    "color": "#5c8fa1"
+  },
+  "water": {
+    "img": "https://archives.bulbagarden.net/media/upload/8/80/Water_icon_SwSh.png",
+    "color": "#5192d3"
+  }
+}

@@ -38,6 +38,20 @@ export const Card = styled.div`
   align-items: center;
 `;
 
+export const Id = styled.span`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -5px;
+  right: 6%;
+  background: #22222277;
+  color: azure;
+  width: 1.5em;
+  height: 1.75em;
+  clip-path: polygon(100% 0, 100% 100%, 50% 85%, 0% 100%, 0% 0%);
+`;
+
 export const Type = styled.div`
   pointer-events: none;
 

@@ -22,25 +22,30 @@ const PokemonCard = ({ pokemon }) => {
       >
         <S.Card>
           <S.TopContainer>
-            <S.Type active={active}>
-              {pokemon.types.map((type) => (
-                <span>{type.type.name}</span>
-              ))}
-            </S.Type>
+            <S.Id>{pokemon.id}</S.Id>
+            {!!pokemon.types ? (
+              <S.Type active={active}>
+                {pokemon.types.map((type) => (
+                  <span>{type.type.name}</span>
+                ))}
+              </S.Type>
+            ) : null}
             <S.Name active={active}>
               {pokemon.name
                 ? pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
                 : ""}
             </S.Name>
           </S.TopContainer>
-          <S.PokeImg active={active}>
-            <Image
-              alt={`${pokemon.name} Card`}
-              height={120}
-              width={120}
-              src={pokemon.sprites.front_default}
-            />
-          </S.PokeImg>
+          {pokemon.sprites.front_default ? (
+            <S.PokeImg active={active}>
+              <Image
+                alt={`${pokemon.name} Card`}
+                height={120}
+                width={120}
+                src={pokemon.sprites.front_default}
+              />
+            </S.PokeImg>
+          ) : null}
         </S.Card>
       </Tilt>
     </S.CardContainer>

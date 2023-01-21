@@ -8,6 +8,15 @@ import SettingModal from "../components/styled/blocks/SettingModal";
 export async function getServerSideProps(ctx) {
   var results = [];
   // Check if we have a session
+  const session = await getSession(ctx);
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
 
   try {
     //* Make a post request to our own internal API and send the user session data with it to grab all the events to that user

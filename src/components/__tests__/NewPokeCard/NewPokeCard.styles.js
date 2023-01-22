@@ -1,16 +1,14 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 
-const pulse = keyframes`
-  0% {
-    opacity: .75;
-    transform: scale(.9)
+export const OuterContainer = styled.div`
+  :root {
   }
-  100% {
-    opacity: 0;
 
-    transform: scale(1.45)
-
-  }
+  position: relative;
+  height: var(--card-height);
+  width: var(--card-width);
+  border-radius: 0.35rem;
+  z-index: ${(props) => (props.active ? 3 : 1)};
 `;
 export const CardContainer = styled.div`
   height: inherit;
@@ -39,6 +37,7 @@ export const CardFront = styled.div`
   transition: 500ms;
 
   .pokemon-img {
+    position: relative;
     max-width: 100%;
     object-fit: cover;
     margin-bottom: -10px;
@@ -53,12 +52,6 @@ export const CardFront = styled.div`
     `}
 `;
 
-export const ImgMask = styled.img`
-  position: absolute;
-  width: inherit;
-  display: none;
-`;
-
 export const Name = styled.p`
   text-align: center;
   font-family: sans-serif;
@@ -70,42 +63,6 @@ export const Types = styled.div`
   display: flex;
   justify-content: space-around;
   margin: 0.25rem 1rem;
-`;
-
-export const Type = styled.div`
-  & {
-    border-radius: 50%;
-    box-shadow: 1px 1px 2px #22222288;
-    height: 23px;
-    width: 23px;
-
-    img {
-      position: relative;
-      height: 23px;
-      width: 23px;
-    }
-  }
-
-  &:hover {
-    transition: 100ms;
-    transform: scale(1.05);
-  }
-
-  &:hover::before {
-    animation: ${pulse} 1200ms infinite;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 15%;
-    right: 0;
-    left: 0;
-    border-radius: 50%;
-    background: ${(props) => props.typeColor ?? "white"};
-    opacity: 0;
-  }
 `;
 
 export const Id = styled.span`

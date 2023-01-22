@@ -72,7 +72,7 @@ function PokemonListPage() {
 
   //* Mapping the pokeData to its rightful spots for an example of how we would do i
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       {/*{pokeData.sort(compareNumbers).map((poke) => (*/}
       {/*  <PokemonCard pokemon={poke} />*/}
       {/*))}*/}

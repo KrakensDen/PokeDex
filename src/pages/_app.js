@@ -9,6 +9,8 @@ import { useState, useEffect } from "react";
 const GlobalStyle = createGlobalStyle`
   :root {
     --default-bg-gradient: linear-gradient(95deg, #263238aa, #212121aa);
+    --card-height: 11rem;
+    --card-width: 8rem;
   }
 
   * {

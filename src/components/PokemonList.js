@@ -26,18 +26,6 @@ function PokemonList({ pokemon }) {
             return <NewPokeCard key={poke.id} pokemon={poke} />;
           })}
       </div>
-      <Grid.Container gap={1} justify="center">
-        {pokemon
-          .sort(compareNumbers)
-          .filter((item, index, arr) => arr.indexOf(item) === index)
-          .map((poke) => {
-            return (
-              <Grid key={poke.id}>
-                <PokemonCard key={poke.id} pokemon={poke} />
-              </Grid>
-            );
-          })}
-      </Grid.Container>
     </div>
   );
 }

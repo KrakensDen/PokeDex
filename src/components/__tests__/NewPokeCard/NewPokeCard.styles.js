@@ -8,7 +8,7 @@ const pulse = keyframes`
   100% {
     opacity: 0;
 
-    transform: scale(1.35)
+    transform: scale(1.45)
 
   }
 `;
@@ -47,8 +47,16 @@ export const CardFront = styled.div`
   ${(props) =>
     props.active &&
     css`
+      box-shadow: 4px 7px 5px #11111177;
+
       transform: translate3d(0, -2rem, 2rem);
     `}
+`;
+
+export const ImgMask = styled.img`
+  position: absolute;
+  width: inherit;
+  display: none;
 `;
 
 export const Name = styled.p`
@@ -65,11 +73,17 @@ export const Types = styled.div`
 `;
 
 export const Type = styled.div`
-  & img {
-    position: relative;
+  & {
     border-radius: 50%;
     box-shadow: 1px 1px 2px #22222288;
-    height: 20px;
+    height: 23px;
+    width: 23px;
+
+    img {
+      position: relative;
+      height: 23px;
+      width: 23px;
+    }
   }
 
   &:hover {
@@ -78,7 +92,7 @@ export const Type = styled.div`
   }
 
   &:hover::before {
-    animation: ${pulse} 1000ms infinite;
+    animation: ${pulse} 1200ms infinite;
   }
 
   &::before {
@@ -118,7 +132,7 @@ export const CardBack = styled.div`
   width: inherit;
   height: inherit;
   border-radius: inherit;
-  background: #333333ee;
+  background: #333333;
   transform-origin: top;
 
   transition: 500ms;
@@ -126,6 +140,7 @@ export const CardBack = styled.div`
   ${(props) =>
     props.active &&
     css`
+      box-shadow: 2px 2px 7px #111111cc;
       transform: scale(1.7, 1.6);
     `}
 `;

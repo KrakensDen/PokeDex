@@ -1,7 +1,7 @@
 import Button from "../components/styled/elements/Button";
 import PokemonCard from "../components/styled/blocks/PokemonCard/PokemonCard";
 import { useState } from "react";
-import pokemon from "./../components/__tests__/tapu-koko.json";
+import NewPokeCard from "../components/__tests__/NewPokeCard";
 
 export default function Home() {
   const [active, setActive] = useState(false);
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main>
       <PokemonCard onClick={onClickCard} active={active} />
-
+      <NewPokeCard />
       <Button href={"/PokemonList"}>Pokemon List</Button>
       <Button href={"/overview"}>Auth Testing</Button>
     </main>

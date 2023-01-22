@@ -3,6 +3,7 @@ import PokemonList from "../../components/PokemonList";
 import PokemonListLayout from "../../layouts/PokemonListLayout";
 import axios from "axios";
 import PokemonCard from "../../components/styled/blocks/PokemonCard/PokemonCard";
+import Button from "../../components/styled/elements/Button";
 
 function PokemonListPage() {
   const pokemon = [
@@ -75,11 +76,24 @@ function PokemonListPage() {
       {/*{pokeData.sort(compareNumbers).map((poke) => (*/}
       {/*  <PokemonCard pokemon={poke} />*/}
       {/*))}*/}
-      {previousPageUrl ? (
-        <button onClick={onPreviousPageHandler}>Previous</button>
-      ) : null}
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        {previousPageUrl ? (
+          <Button color={"#41a5ee"} onClick={onPreviousPageHandler}>
+            ← Previous
+          </Button>
+        ) : (
+          <div></div>
+        )}
 
-      {nextPageUrl ? <button onClick={onNextPageHandler}>Next</button> : null}
+        {nextPageUrl ? (
+          <Button color={"#41a5ee"} onClick={onNextPageHandler}>
+            Next →
+          </Button>
+        ) : (
+          <div></div>
+        )}
+      </div>
+
       <PokemonList pokemon={pokeData} />
     </div>
   );

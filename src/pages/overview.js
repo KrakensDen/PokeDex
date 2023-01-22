@@ -10,7 +10,6 @@ import Image from "next/image";
 export default function CamperVanPage() {
   const { data: session, status } = useSession();
   const userEmail = session?.user.email;
-  console.log(session);
 
   async function clickHandler() {
     const session = await getSession();

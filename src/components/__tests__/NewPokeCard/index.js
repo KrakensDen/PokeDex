@@ -6,6 +6,7 @@ import Tilt from "react-parallax-tilt";
 import pokeTypes from "./../types.json";
 import ToolTip from "./../ToolTip/index";
 import Link from "next/link";
+import Image from "next/image";
 
 const NewPokeCard = ({ pokemon }) => {
   const [active, setActive] = useState(false);
@@ -17,8 +18,8 @@ const NewPokeCard = ({ pokemon }) => {
     <div
       style={{
         position: "relative",
-        height: 10 + "rem",
-        width: 7 + "rem",
+        height: 11 + "rem",
+        width: 8 + "rem",
         borderRadius: 0.35 + "rem",
         zIndex: active ? 3 : 1,
       }}
@@ -28,14 +29,15 @@ const NewPokeCard = ({ pokemon }) => {
           height: "inherit",
           width: "inherit",
         }}
-        scale={0.97}
+        scale={active ? 1 : 0.97}
         glareColor={"rgba(255,238,158,0.3)"}
         glareEnable={true}
-        tiltMaxAngleX={7}
-        tiltMaxAngleY={7}
+        tiltMaxAngleX={active ? 0 : 7}
+        tiltMaxAngleY={active ? 0 : 7}
       >
         <S.CardContainer active={active} onClick={onClickCard}>
           <S.CardFront active={active}>
+            <S.ImgMask src="/images/Multi-Gradient.png"></S.ImgMask>
             <S.Id active={active}>{pokemon.id}</S.Id>
             {pokemon.sprites.front_default ? (
               <img
@@ -64,7 +66,7 @@ const NewPokeCard = ({ pokemon }) => {
                   <S.Type typeColor={pokeTypes[`${type.type.name}`].color}>
                     <Link href={`/types/${type.type.name}`}>
                       <img
-                        alt={`${type.type.name}`}
+                        alt={`${type.type.name} type`}
                         src={pokeTypes[`${type.type.name}`].img}
                       />
                     </Link>

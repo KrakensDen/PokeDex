@@ -7,7 +7,7 @@ function compareNumbers(a, b) {
   return a.id - b.id;
 }
 
-function PokemonList({ pokemon }) {
+function PokemonList({ pokemon, showAddTeamModal }) {
   return (
     <div>
       <div
@@ -23,7 +23,13 @@ function PokemonList({ pokemon }) {
           .sort(compareNumbers)
           .filter((item, index, arr) => arr.indexOf(item) === index)
           .map((poke) => {
-            return <NewPokeCard key={poke.id} pokemon={poke} />;
+            return (
+              <NewPokeCard
+                showAddTeamModal={showAddTeamModal}
+                key={poke.id}
+                pokemon={poke}
+              />
+            );
           })}
       </div>
     </div>

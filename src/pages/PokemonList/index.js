@@ -4,6 +4,8 @@ import PokemonListLayout from "../../layouts/PokemonListLayout";
 import axios from "axios";
 import PokemonCard from "../../components/styled/blocks/PokemonCard/PokemonCard";
 import Button from "../../components/styled/elements/Button";
+import * as S from "../../components/__tests__/NewPokeCard/NewPokeCard.styles";
+import styled from "styled-components";
 
 function PokemonListPage() {
   const pokemon = [
@@ -42,6 +44,8 @@ function PokemonListPage() {
   const [nextPageUrl, setNextPageUrl] = useState();
   const [previousPageUrl, setPreviousPageUrl] = useState();
   const [loading, setLoading] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+  const [currentSelectedPokemonId, setCurrentSelectedPokemonId] = useState();
 
   //* Putting it in a use effect, so it lets the page load while it's grabbing the data
   useEffect(() => {
@@ -68,6 +72,20 @@ function PokemonListPage() {
     setCurrentPageUrl(previousPageUrl);
   };
 
+  const showAddTeamModal = (event, arg) => {
+    if (
+      event.target.innerText === "Cancel" ||
+      event.target.attributes.src.value === "/images/group.png"
+    ) {
+      setShowModal(!showModal);
+      setCurrentSelectedPokemonId(arg);
+    }
+  };
+
+  const addPokemonToTeam = () => {
+    axios.post("http://localhost:3000/api/User/addPokemonTooTeam");
+  };
+
   if (loading) return <h1>Loading...</h1>;
 
   //* Mapping the pokeData to its rightful spots for an example of how we would do i
@@ -76,7 +94,13 @@ function PokemonListPage() {
       {/*{pokeData.sort(compareNumbers).map((poke) => (*/}
       {/*  <PokemonCard pokemon={poke} />*/}
       {/*))}*/}
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: ".5rem ",
+        }}
+      >
         {previousPageUrl ? (
           <Button color={"#41a5ee"} onClick={onPreviousPageHandler}>
             ← Previous
@@ -84,7 +108,6 @@ function PokemonListPage() {
         ) : (
           <div></div>
         )}
-
         {nextPageUrl ? (
           <Button color={"#41a5ee"} onClick={onNextPageHandler}>
             Next →
@@ -94,10 +117,61 @@ function PokemonListPage() {
         )}
       </div>
 
-      <PokemonList pokemon={pokeData} />
+      <PokemonList showAddTeamModal={showAddTeamModal} pokemon={pokeData} />
+      <ModalContainer active={showModal}>
+        <ModalBackdrop />
+        <Modal>
+          <h3>Add Pokemon?</h3>
+          <p>Would you like to add this pokemon to your team?</p>
+          <BtnContainer>
+            <Button onClick={showAddTeamModal} color={"#fe4d34"}>
+              Cancel
+            </Button>
+            <Button onClick={addPokemonToTeam} color={"#41a5ee"}>
+              Save
+            </Button>
+          </BtnContainer>
+        </Modal>
+      </ModalContainer>
     </div>
   );
 }
+
+const BtnContainer = styled.div`
+  display: flex;
+`;
+
+const Modal = styled.div`
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background: #222222;
+  border-radius: 1rem;
+  width: 26rem;
+  height: 18rem;
+`;
+
+const ModalContainer = styled.div`
+  position: fixed;
+  display: ${(props) => (props.active ? "grid" : "none")};
+  place-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+`;
+const ModalBackdrop = styled.div`
+  background: #22222277;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+`;
 
 PokemonListPage.getLayout = function getLayout(page) {
   return <PokemonListLayout title={"Pokemon List"}>{page}</PokemonListLayout>;

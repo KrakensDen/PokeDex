@@ -20,12 +20,9 @@ export async function getServerSideProps(ctx) {
 
   try {
     //* Make a post request to our own internal API and send the user session data with it to grab all the events to that user
-    const response = await axios.post(
-      "http://localhost:3000/api/accountCreated",
-      {
-        session: await getSession(ctx),
-      }
-    );
+    const response = await axios.post("http://localhost:3000/api/User", {
+      session: await getSession(ctx),
+    });
     results = response.data;
   } catch (error) {
     console.error(error.response);

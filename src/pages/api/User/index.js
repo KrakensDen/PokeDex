@@ -1,4 +1,4 @@
-import prisma from "../../lib/prismadb";
+import prisma from "../../../lib/prismadb";
 
 export default async function handler(req, res) {
   const date = await prisma.user.findMany({

@@ -53,12 +53,12 @@ const Type = ({ type }) => {
       <h1>{type.charAt(0).toUpperCase() + type.slice(1)} Type</h1>
       <h2>Damage Relations</h2>
       <div style={{ display: "flex" }}>
-        {Object.keys(typeData.damage_relations).map((p) => (
-          <div key={p}>
-            <h1>{p.replaceAll("_", " ")}</h1>
+        {Object.keys(typeData.damage_relations).map((relation) => (
+          <div key={relation}>
+            <h1>{relation.replaceAll("_", " ")}</h1>
             <div style={{ display: "flex" }}>
-              {typeData.damage_relations[p].map((p) => {
-                return <PokemonType key={p.name} type={{ type: p }} />;
+              {typeData.damage_relations[relation].map((type) => {
+                return <PokemonType key={type.name} type={{ type: type }} />;
               })}
             </div>
           </div>

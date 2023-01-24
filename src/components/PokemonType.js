@@ -63,7 +63,7 @@ const Type = styled.div`
     content: "";
     position: absolute;
     top: 0;
-    bottom: 15%;
+    bottom: 0;
     right: 0;
     left: 0;
     border-radius: 50%;

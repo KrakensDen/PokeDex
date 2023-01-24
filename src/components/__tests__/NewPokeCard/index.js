@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import * as S from "./NewPokeCard.styles";
 import charmander from "../charmander.json";
 import tapu from "../tapu-koko.json";
 import Tilt from "react-parallax-tilt";
 import PokemonType from "../../PokemonType";
 
-const NewPokeCard = ({pokemon, showAddTeamModal, url}) => {
+const NewPokeCard = ({ pokemon, showAddTeamModal, url }) => {
   const [active, setActive] = useState(false);
   const [showShiny, setShowShiny] = useState(false);
 
@@ -35,7 +35,10 @@ const NewPokeCard = ({pokemon, showAddTeamModal, url}) => {
     setActive(!active);
   };
   const onShowShiny = () => {
-    setShowShiny(!showShiny);
+    setShowShiny(true);
+  };
+  const onHideShiny = () => {
+    setShowShiny(false);
   };
 
   return (
@@ -52,18 +55,10 @@ const NewPokeCard = ({pokemon, showAddTeamModal, url}) => {
           tiltMaxAngleX={active ? 0 : 7}
           tiltMaxAngleY={active ? 0 : 7}
         >
-          <S.CardContainer
-            shiny={showShiny}
-            active={active}
-            onClick={onClickCard}
-          >
+          <S.CardContainer shiny={showShiny} active={active} onDoubleClick={onClickCard}>
             <S.CardFront active={active}>
-              <S.Shiny
-                onMouseOut={onShowShiny}
-                onMouseEnter={onShowShiny}
-                id={"shiny"}
-              >
-                <img alt={"shiny toggle"} src={"/images/stars.png"}/>
+              <S.Shiny onMouseLeave={onHideShiny} onMouseEnter={onShowShiny} id={"shiny"}>
+                <img alt={"shiny toggle"} src={"/images/stars.png"} />
               </S.Shiny>
               <S.Id active={active}>{pokemon.id}</S.Id>
 
@@ -87,18 +82,16 @@ const NewPokeCard = ({pokemon, showAddTeamModal, url}) => {
                   src="/images/unknown-pokemon-png.png"
                 />
               )}
-              <S.Name>{`${
-                pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
-              }`}</S.Name>
+              <S.Name>{`${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}`}</S.Name>
               <S.Types>
                 {pokemon.types.map((type) => (
-                  <PokemonType type={type}/>
+                  <PokemonType type={type} />
                 ))}
               </S.Types>
             </S.CardFront>
             <S.CardBack active={active}>
-              {url !== '/profile' ?
-                (<S.AddToTeam>
+              {url !== "/profile" ? (
+                <S.AddToTeam>
                   <img
                     onClick={(event) => showAddTeamModal(event, pokemon.id)}
                     width={10}
@@ -106,13 +99,10 @@ const NewPokeCard = ({pokemon, showAddTeamModal, url}) => {
                     alt={""}
                     src={"/images/group.png"}
                   />
-                </S.AddToTeam>)
-                :
-                (
-                  <></>
-                )
-
-              }
+                </S.AddToTeam>
+              ) : (
+                <></>
+              )}
               <S.Stats>
                 {pokemon.stats.map((stat) => (
                   <S.Stat>

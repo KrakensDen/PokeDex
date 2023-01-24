@@ -6,6 +6,7 @@ import PokemonCard from "../../components/styled/blocks/PokemonCard/PokemonCard"
 import Button from "../../components/styled/elements/Button";
 import * as S from "../../components/__tests__/NewPokeCard/NewPokeCard.styles";
 import styled from "styled-components";
+import { getSession, useSession } from "next-auth/react";
 
 function PokemonListPage() {
   const pokemon = [
@@ -37,6 +38,8 @@ function PokemonListPage() {
   ];
 
   // * Basic axios call to get the list of Pokémon
+  const { data: session, status } = useSession();
+
   const [pokeData, setPokeData] = useState([]);
   const [currentPageUrl, setCurrentPageUrl] = useState(
     "https://pokeapi.co/api/v2/pokemon"
@@ -83,7 +86,20 @@ function PokemonListPage() {
   };
 
   const addPokemonToTeam = () => {
-    axios.post("http://localhost:3000/api/User/addPokemonTooTeam");
+    axios
+      .post("http://localhost:3000/api/User/addPokemonTooTeam", {
+        body: {
+          pokemonId: currentSelectedPokemonId,
+          session: session,
+        },
+      })
+      .then((res) => {
+        console.log(res);
+        if (res.data.message === "PokeBox Is Full") {
+          alert("PokeBox Is Full");
+        }
+      });
+    setShowModal(!showModal);
   };
 
   if (loading) return <h1>Loading...</h1>;

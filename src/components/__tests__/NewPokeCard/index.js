@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import * as S from "./NewPokeCard.styles";
 import charmander from "../charmander.json";
 import tapu from "../tapu-koko.json";
 import Tilt from "react-parallax-tilt";
 import PokemonType from "../../PokemonType";
 
-const NewPokeCard = ({ pokemon, showAddTeamModal }) => {
+const NewPokeCard = ({pokemon, showAddTeamModal, url}) => {
   const [active, setActive] = useState(false);
   const [showShiny, setShowShiny] = useState(false);
 
@@ -63,7 +63,7 @@ const NewPokeCard = ({ pokemon, showAddTeamModal }) => {
                 onMouseEnter={onShowShiny}
                 id={"shiny"}
               >
-                <img alt={"shiny toggle"} src={"/images/stars.png"} />
+                <img alt={"shiny toggle"} src={"/images/stars.png"}/>
               </S.Shiny>
               <S.Id active={active}>{pokemon.id}</S.Id>
 
@@ -92,20 +92,27 @@ const NewPokeCard = ({ pokemon, showAddTeamModal }) => {
               }`}</S.Name>
               <S.Types>
                 {pokemon.types.map((type) => (
-                  <PokemonType type={type} />
+                  <PokemonType type={type}/>
                 ))}
               </S.Types>
             </S.CardFront>
             <S.CardBack active={active}>
-              <S.AddToTeam>
-                <img
-                  onClick={(event) => showAddTeamModal(event, pokemon.id)}
-                  width={10}
-                  height={10}
-                  alt={""}
-                  src={"/images/group.png"}
-                />
-              </S.AddToTeam>
+              {url !== '/profile' ?
+                (<S.AddToTeam>
+                  <img
+                    onClick={(event) => showAddTeamModal(event, pokemon.id)}
+                    width={10}
+                    height={10}
+                    alt={""}
+                    src={"/images/group.png"}
+                  />
+                </S.AddToTeam>)
+                :
+                (
+                  <></>
+                )
+
+              }
               <S.Stats>
                 {pokemon.stats.map((stat) => (
                   <S.Stat>

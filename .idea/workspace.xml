@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="Made a New And Improved PokeCard We'll see which one is better. Also added a dynamic route for the pokemon Types and added the damage relation feilds.">
-      <change afterPath="$PROJECT_DIR$/public/images/group.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/api/User/addPokemonTooTeam.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/stars.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/stars.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/NewPokeCard.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/NewPokeCard.styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/PokemonList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PokemonList/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/api/accountCreated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/api/User/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/api/User/addPokemonTooTeam.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/api/User/addPokemonTooTeam.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/types/[typeid].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/types/[typeid].js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +114,7 @@
       <workItem from="1674362053598" duration="9367000" />
       <workItem from="1674371502326" duration="10656000" />
       <workItem from="1674425049705" duration="208000" />
-      <workItem from="1674516675290" duration="6419000" />
+      <workItem from="1674516675290" duration="11991000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1673411356460</created>

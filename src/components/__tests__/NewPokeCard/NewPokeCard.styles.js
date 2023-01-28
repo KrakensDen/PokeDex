@@ -38,7 +38,11 @@ export const CardFront = styled.div`
   width: inherit;
   height: inherit;
   border-radius: inherit;
-  background-image: url("/gif/Multi-Gradient.gif");
+  background: linear-gradient(
+    45deg,
+    ${(props) => props.color},
+    ${(props) => props.color2}
+  );
   background-size: cover;
   z-index: 100;
 
@@ -59,6 +63,26 @@ export const CardFront = styled.div`
 
       transform: translate3d(0, -2rem, 2rem);
     `}
+`;
+
+export const Background = styled.div`
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: inherit;
+    filter: grayscale(100%);
+  }
 `;
 
 export const Name = styled.p`

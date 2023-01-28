@@ -11,7 +11,7 @@ export const BG = styled.div`
   backdrop-filter: blur(0.1rem);
 `;
 
-export const Modal = styled.body`
+export const Modal = styled.div`
   position: absolute;
   top: 10%;
   left: 25%;

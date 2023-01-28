@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { SFlex } from "../../containers/Flex";
 
 export const ProfileHead = styled(SFlex)`
-  height: 200px;
   margin: 2rem;
   padding: 1rem;
   border: 2px solid #222222;
@@ -38,7 +37,7 @@ export const ProfileInfo = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export const TrainerLvl = styled.span`
+export const TrainerLvl = styled.div`
   display: flex;
   position: relative;
   justify-content: flex-start;

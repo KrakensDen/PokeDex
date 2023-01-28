@@ -5,9 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="Made a New And Improved PokeCard We'll see which one is better. Also added a dynamic route for the pokemon Types and added the damage relation feilds.">
+      <change afterPath="$PROJECT_DIR$/public/images/remove.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/gradient.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/__tests__/Gradient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/__tests__/Gradient2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/api/User/removePokemonFromTeam.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/NewPokeCard.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/NewPokeCard.styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/ProifleHeader.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/ProifleHeader.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/SettingModal/SettingModal.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/SettingModal/SettingModal.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/containers/Container.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/containers/Container.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/AppHead.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/AppHead.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/AppLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/AppLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Navbar/navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Navbar/navbar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/PokemonListLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PokemonList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PokemonList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/api/User/addPokemonTooTeam.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/api/User/addPokemonTooTeam.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,23 +59,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;N:/_VSCode/pokedex-project/public/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\TedCu\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\TedCu\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\223.8214.51\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "N:/_VSCode/pokedex-project/public/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\TedCu\\AppData\\Roaming\\npm\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Users\\TedCu\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\223.8214.51\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="nates-edit" />
@@ -111,7 +134,12 @@
       <workItem from="1674362053598" duration="9367000" />
       <workItem from="1674371502326" duration="10656000" />
       <workItem from="1674425049705" duration="208000" />
-      <workItem from="1674516675290" duration="13192000" />
+      <workItem from="1674516675290" duration="29742000" />
+      <workItem from="1674604468621" duration="171000" />
+      <workItem from="1674604850500" duration="126000" />
+      <workItem from="1674607350954" duration="4736000" />
+      <workItem from="1674856169060" duration="3359000" />
+      <workItem from="1674862217541" duration="2594000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1673411356460</created>
@@ -179,5 +207,15 @@
     <MESSAGE value="Updated the PokemonList/index.js to fetch the pokemon data from pokeapi.io and then passes it to the pokemonList component that then displays each pokemon in a PokemonCard Grid." />
     <MESSAGE value="Made a New And Improved PokeCard We'll see which one is better. Also added a dynamic route for the pokemon Types and added the damage relation feilds." />
     <option name="LAST_COMMIT_MESSAGE" value="Made a New And Improved PokeCard We'll see which one is better. Also added a dynamic route for the pokemon Types and added the damage relation feilds." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/PokemonList/index.js</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

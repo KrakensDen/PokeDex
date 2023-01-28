@@ -1,8 +1,5 @@
-import React, { useState } from "react";
-import { PageContainer } from "../components/styled/containers/Container.styles";
-import AppHead from "../layouts/AppHead";
-import Footer from "../layouts/Footer/Footer";
-import Navbar from "../layouts/Navbar";
+import React from "react";
+import AppLayout from "../layouts/AppLayout";
 
 const About = () => {
   return (
@@ -16,11 +13,8 @@ export default About;
 
 About.getLayout = function PageLayout(page) {
   return (
-    <>
-      <AppHead headTitle={"About Page"} />
-      <Navbar title={"About Us"} />
-      <PageContainer>{page}</PageContainer>
-      <Footer />
-    </>
+    <AppLayout title={"About Us"} headTitle={"About Page"}>
+      {page}
+    </AppLayout>
   );
 };

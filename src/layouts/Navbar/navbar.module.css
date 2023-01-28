@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     color: azure;
+    position: sticky;
 }
 
 .nav button {

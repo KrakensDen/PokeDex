@@ -1,6 +1,5 @@
 import React from "react";
-import PokemonCard from "./styled/blocks/PokemonCard/PokemonCard";
-import { Grid } from "@nextui-org/react";
+import pokeTypes from "./__tests__/types.json";
 import NewPokeCard from "./__tests__/NewPokeCard";
 
 function compareNumbers(a, b) {
@@ -25,6 +24,7 @@ function PokemonList({ pokemon, showAddTeamModal }) {
           .map((poke) => {
             return (
               <NewPokeCard
+                color1={pokeTypes[`${poke.types[0].type.name}`].color}
                 showAddTeamModal={showAddTeamModal}
                 key={poke.id}
                 pokemon={poke}

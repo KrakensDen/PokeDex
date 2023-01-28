@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PokemonList from "../../components/PokemonList";
-import PokemonListLayout from "../../layouts/PokemonListLayout";
 import axios from "axios";
-import PokemonCard from "../../components/styled/blocks/PokemonCard/PokemonCard";
 import Button from "../../components/styled/elements/Button";
-import * as S from "../../components/__tests__/NewPokeCard/NewPokeCard.styles";
 import styled from "styled-components";
-import { getSession, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
+import AppLayout from "../../layouts/AppLayout";
+import { PokemonPageContainer } from "../../components/styled/containers/Container.styles";
+import SideBar from "../../layouts/SideBar/SideBar";
 
 function PokemonListPage() {
   const pokemon = [
@@ -95,8 +95,11 @@ function PokemonListPage() {
       })
       .then((res) => {
         console.log(res);
+
         if (res.data.message === "PokeBox Is Full") {
           alert("PokeBox Is Full");
+        } else {
+          alert("Pokemon has been added to your Team in your Profile");
         }
       });
     setShowModal(!showModal);
@@ -190,7 +193,14 @@ const ModalBackdrop = styled.div`
 `;
 
 PokemonListPage.getLayout = function getLayout(page) {
-  return <PokemonListLayout title={"Pokemon List"}>{page}</PokemonListLayout>;
+  return (
+    <AppLayout headTitle={"Pokemon List"} title={"PokemonList"}>
+      <PokemonPageContainer>
+        <SideBar />
+        {page}
+      </PokemonPageContainer>
+    </AppLayout>
+  );
 };
 
 export default PokemonListPage;

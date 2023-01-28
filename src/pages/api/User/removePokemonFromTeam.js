@@ -9,19 +9,20 @@ export default async function handler(req, res) {
     },
   });
 
-  let pokebox = User[0].pokebox;
-  if (pokebox?.split(",").length >= 6) {
-    return res.status(200).json({ message: "PokeBox Is Full" });
+  let pokebox = User[0].pokebox.split(",");
+  const index = pokebox.indexOf(pokemonId.toString());
+  try {
+    pokebox.splice(index, 1);
+  } catch (e) {
+    return res.status(200).json({ message: e.message });
   }
-  pokebox = pokebox ? pokebox.replace('"', "") : "";
-  pokebox += pokebox ? `,${pokemonId}` : `${pokemonId}`;
 
   await prisma.user.update({
     where: {
       email: req.body.body.session.user.email,
     },
     data: {
-      pokebox: pokebox,
+      pokebox: pokebox.toString(),
     },
   });
   res.status(200).json({ name: "John Doe" });

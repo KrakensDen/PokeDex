@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
-  width: 100%;
+  width: clamp(600px, 100%, 1200px);
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
 `;
 
 export const PokemonPageContainer = styled(PageContainer)`

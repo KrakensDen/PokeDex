@@ -23,6 +23,7 @@ const ProfileHeader = ({
         ) : (
           <Image
             width={85}
+            priority
             height={85}
             src={"/user.png"}
             alt={"User Img Placeholder"}

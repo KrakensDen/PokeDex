@@ -1,46 +1,18 @@
-import "../styles/globals.css";
-import { SSRProvider } from "@react-aria/ssr";
-import { SessionProvider, useSession } from "next-auth/react";
+import {SSRProvider} from "@react-aria/ssr";
+import {SessionProvider} from "next-auth/react";
 import AppLayout from "../layouts/AppLayout";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
-import { theme } from "/src/styles/variables";
-import { useState, useEffect } from "react";
+import {ThemeProvider} from "styled-components";
+import {theme} from "/src/styles/variables";
+import {useState, useEffect} from "react";
+//* Global Style Import That is injected into the components
+import GlobalStyle from "./../styles/GlobalStyles";
 
-const GlobalStyle = createGlobalStyle`
-  :root {
-    --default-bg-gradient: linear-gradient(95deg, #263238aa, #212121aa);
-    --card-height: 11rem;
-    --card-width: 8rem;
-  }
-
-  * {
-    font-family: ${(props) => props.theme.fontFamily};
-  }
-
-  button {
-    font-family: ${(props) => props.theme.fontFamily};
-    font-weight: bolder;
-  }
-
-  @keyframes animate {
-    0% {
-      width: 0;
-      height: 0;
-      opacity: 0.2;
-    }
-    100% {
-      width: 400px;
-      height: 400px;
-      opacity: 0;
-    }
-
-  }
-`;
-
+// ! Main App Component Every page is rendered through this component
 export default function App({
-  Component,
-  pageProps: { session, ...pageProps },
-}) {
+                              Component,
+                              pageProps: {session, ...pageProps},
+                            }) {
+  //! Probably shouldn't have (known to skip over server side rendering) -|
   const [showChild, setShowChild] = useState(false);
   useEffect(() => {
     setShowChild(true);
@@ -50,6 +22,7 @@ export default function App({
     return null;
   }
 
+  //! take all this out with the above code                              |
   if (typeof window === "undefined") {
     return <></>;
   } else {
@@ -59,7 +32,7 @@ export default function App({
         <SessionProvider session={session}>
           <SSRProvider>
             <ThemeProvider theme={theme}>
-              <GlobalStyle />
+              <GlobalStyle/>
               {Component.getLayout(<Component {...pageProps} />)}
             </ThemeProvider>
           </SSRProvider>
@@ -72,7 +45,7 @@ export default function App({
       <SessionProvider session={session}>
         <SSRProvider>
           <ThemeProvider theme={theme}>
-            <GlobalStyle />
+            <GlobalStyle/>
             <AppLayout title={"PokeDex"}>
               <Component {...pageProps} />
             </AppLayout>

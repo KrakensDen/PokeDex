@@ -1,8 +1,4 @@
 import React from "react";
-import AppHead from "../layouts/AppHead";
-import Navbar from "../layouts/Navbar";
-import Footer from "../layouts/Footer/Footer";
-import { PageContainer } from "../components/styled/containers/Container.styles";
 import AppLayout from "../layouts/AppLayout";
 
 const Settings = () => {

@@ -143,20 +143,28 @@ const Profile = ({ data, url }) => {
 
 const TopSixPokemonContainer = styled.div`
   text-align: center;
-  margin: 2rem;
+  margin: 2rem auto;
   padding-top: 2rem;
   border: 2px solid #222222;
   border-radius: 0.75rem;
+  width: max-content;
 
   h3 {
     font-size: 30px;
   }
 `;
 const TopSixPokemon = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+
   margin: 2rem;
   padding: 1rem 2rem;
+
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const BtnContainer = styled.div`

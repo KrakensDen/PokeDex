@@ -1,14 +1,22 @@
 import styled from "styled-components";
-import { SFlex } from "../../containers/Flex";
 
-export const ProfileHead = styled(SFlex)`
+export const ProfileHead = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1fr, 3);
+  grid-auto-flow: column;
   margin: 2rem;
   padding: 1rem;
   border: 2px solid #222222;
   border-radius: 0.75rem;
+
+  @media (max-width: 760px) {
+    grid-auto-flow: unset;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const ProfileImg = styled.div`
+  place-self: flex-end;
   width: 90px;
   height: 90px;
   border: 2px solid #222222ee;
@@ -18,9 +26,14 @@ export const ProfileImg = styled.div`
   img {
     object-fit: cover;
   }
+
+  @media (max-width: 760px) {
+    grid-column: 1 / 2;
+  }
 `;
 
 export const ProfileName = styled.div`
+  place-self: flex-start;
   color: #222222;
   height: 25px;
   margin: 10px 0 0 0;
@@ -31,6 +44,10 @@ export const ProfileName = styled.div`
   text-transform: uppercase;
   font-family: Segoe UI, sans-serif;
   font-weight: 700;
+
+  @media (max-width: 760px) {
+    grid-column: 2 / 3;
+  }
 `;
 
 export const ProfileInfo = styled.div`
@@ -70,6 +87,12 @@ export const TrainerLvl = styled.div`
 export const AccountDate = styled.div`
   margin: 1rem;
   pointer-events: none;
+  place-self: center;
+
+  @media (max-width: 760px) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
 
   span {
     background-color: #424754;

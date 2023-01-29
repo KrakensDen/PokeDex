@@ -9,35 +9,6 @@ import { PokemonPageContainer } from "../../components/styled/containers/Contain
 import SideBar from "../../layouts/SideBar/SideBar";
 
 function PokemonListPage() {
-  const pokemon = [
-    {
-      name: "bulbasaur",
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-    },
-    {
-      name: "charmander",
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-    },
-    {
-      name: "charmander",
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-    },
-    {
-      name: "charmander",
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-    },
-    {
-      name: "charmander",
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-    },
-  ];
-
-  // * Basic axios call to get the list of Pokémon
   const { data: session, status } = useSession();
 
   const [pokeData, setPokeData] = useState([]);

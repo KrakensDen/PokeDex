@@ -17,8 +17,9 @@ const GlobalStyle = createGlobalStyle`
     rgba(1, 65, 255, 0.3));
 
     --default-bg-gradient: linear-gradient(95deg, #263238aa, #212121aa);
-    --card-height: 11rem;
-    --card-width: 8rem;
+
+    --card-height: 13rem;
+    --card-width: 9rem;
 
 
     /*  Custom color Library  */

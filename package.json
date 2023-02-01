@@ -18,6 +18,8 @@
     "axios": "^1.2.2",
     "babel-plugin-styled-components": "^2.0.7",
     "colorthief": "^2.3.2",
+    "nates-component-library": "^1.2.9",
+    "nates-react-library": "^0.2.35",
     "next": "13.1.1",
     "next-auth": "^4.18.8",
     "nodemailer": "^6.8.0",

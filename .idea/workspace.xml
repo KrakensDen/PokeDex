@@ -4,18 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="Refactored some of the styles and added the use top 6 selection and deletion.">
-      <change afterPath="$PROJECT_DIR$/public/svg/Exit_SVG.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NewModal/Modal.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NewModal/index.js" afterDir="false" />
+    <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="Refactored the Custom Button in the components/elements/Button to look and run a lot better. using css filters to invert the text color instead of js functions. also refactored the global styles out of the _app file and put it in the styles folder and imported it into the _app file">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/ProifleHeader.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/ProifleHeader.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled/containers/Container.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/containers/Container.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PokemonType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/NewPokeCard.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/NewPokeCard.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/__tests__/NewPokeCard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/__tests__/types.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/__test__/types.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/elements/Button/Button.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/elements/Button/Button.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/elements/Button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/elements/Button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/SideBar/SideBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/PokemonList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PokemonList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/types/[typeid].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/types/[typeid].js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/GlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,23 +50,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "N:/_VSCode/pokedex-project/public/svg",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\TedCu\\AppData\\Roaming\\npm\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\Users\\TedCu\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\223.8214.51\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;N:/_VSCode/MyPackages/nates-component-library&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\TedCu\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.reader.mode&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\TedCu\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\223.8214.51\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="nates-edit" />
@@ -76,11 +81,11 @@
       <recent name="N:\_VSCode\pokedex-project\src\components\styled\blocks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="N:\_VSCode\pokedex-project\src\data\__test__" />
       <recent name="N:\_VSCode\pokedex-project\public\svg" />
       <recent name="N:\_VSCode\pokedex-project\src\pages\api\User" />
       <recent name="N:\_VSCode\pokedex-project\public\gif" />
       <recent name="N:\_VSCode\pokedex-project\src\components\__tests__" />
-      <recent name="N:\_VSCode\pokedex-project\src\components\__tests__\NewPokeCard" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -126,7 +131,15 @@
       <workItem from="1674607350954" duration="4736000" />
       <workItem from="1674856169060" duration="3359000" />
       <workItem from="1674862217541" duration="6313000" />
-      <workItem from="1674945919818" duration="6461000" />
+      <workItem from="1674945919818" duration="7066000" />
+      <workItem from="1674953353427" duration="316000" />
+      <workItem from="1674956360407" duration="35000" />
+      <workItem from="1674965798460" duration="8803000" />
+      <workItem from="1675194805881" duration="2412000" />
+      <workItem from="1675202089944" duration="7983000" />
+      <workItem from="1675231589197" duration="2211000" />
+      <workItem from="1675286847499" duration="21000" />
+      <workItem from="1675286938545" duration="2895000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1673411356460</created>
@@ -177,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674865856822</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Made the profile head a grid layout and made it more responsive on smaller screen sizes. Did the same to the Top Six: list. and Started working on a universal modal that can be passed arrays to fill the content with whatever you like.">
+      <created>1674952397266</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674952397266</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +221,8 @@
     <MESSAGE value="Updated the PokemonList/index.js to fetch the pokemon data from pokeapi.io and then passes it to the pokemonList component that then displays each pokemon in a PokemonCard Grid." />
     <MESSAGE value="Made a New And Improved PokeCard We'll see which one is better. Also added a dynamic route for the pokemon Types and added the damage relation feilds." />
     <MESSAGE value="Refactored some of the styles and added the use top 6 selection and deletion." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored some of the styles and added the use top 6 selection and deletion." />
+    <MESSAGE value="Made the profile head a grid layout and made it more responsive on smaller screen sizes. Did the same to the Top Six: list. and Started working on a universal modal that can be passed arrays to fill the content with whatever you like." />
+    <MESSAGE value="Refactored the Custom Button in the components/elements/Button to look and run a lot better. using css filters to invert the text color instead of js functions. also refactored the global styles out of the _app file and put it in the styles folder and imported it into the _app file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored the Custom Button in the components/elements/Button to look and run a lot better. using css filters to invert the text color instead of js functions. also refactored the global styles out of the _app file and put it in the styles folder and imported it into the _app file" />
   </component>
 </project>

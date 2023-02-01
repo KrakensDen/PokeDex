@@ -1,9 +1,6 @@
 import styled, { css } from "styled-components";
 
 export const OuterContainer = styled.div`
-  :root {
-  }
-
   position: relative;
   height: var(--card-height);
   width: var(--card-width);

@@ -2,63 +2,7 @@ import React from "react";
 import styles from "./sidebar.module.css";
 import Link from "next/link";
 import { Collapse } from "@nextui-org/react";
-
-const POKEMON_TYPES = [
-  {
-    type: "Normal",
-  },
-  {
-    type: "Fire",
-  },
-  {
-    type: "Water",
-  },
-  {
-    type: "Grass",
-  },
-  {
-    type: "Electric",
-  },
-  {
-    type: "Ice",
-  },
-  {
-    type: "Fighting",
-  },
-  {
-    type: "Poison",
-  },
-  {
-    type: "Ground",
-  },
-  {
-    type: "Flying",
-  },
-  {
-    type: "Psychic",
-  },
-  {
-    type: "Bug",
-  },
-  {
-    type: "Rock",
-  },
-  {
-    type: "Ghost",
-  },
-  {
-    type: "Dark",
-  },
-  {
-    type: "Dragon",
-  },
-  {
-    type: "Steel",
-  },
-  {
-    type: "Fairy",
-  },
-];
+import pokeTypes from "./../../data/__test__/types.json";
 
 const SideBar = () => {
   return (
@@ -69,16 +13,16 @@ const SideBar = () => {
       <br />
       <Collapse.Group>
         <Collapse title="Types">
-          {POKEMON_TYPES.map(({ type }, index) => {
+          {Object.keys(Object(pokeTypes)).map((name, index) => {
             return (
               <div key={index}>
                 <Link
                   className={styles.link}
                   href={"/PokemonList"}
-                  id={type}
+                  id={name}
                   key={index}
                 >
-                  {type}
+                  {name.charAt(0).toUpperCase() + name.slice(1)}
                 </Link>
               </div>
             );

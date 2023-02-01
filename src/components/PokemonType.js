@@ -1,6 +1,6 @@
 import React from "react";
 import ToolTip from "./__tests__/ToolTip";
-import pokeTypes from "./__tests__/types.json";
+import pokeTypes from "../data/__test__/types.json";
 import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import PokemonList from "../../components/PokemonList";
 import axios from "axios";
 import Button from "../../components/styled/elements/Button";
 import styled from "styled-components";
@@ -7,9 +6,11 @@ import { useSession } from "next-auth/react";
 import AppLayout from "../../layouts/AppLayout";
 import { PokemonPageContainer } from "../../components/styled/containers/Container.styles";
 import SideBar from "../../layouts/SideBar/SideBar";
+import NewPokeCard from "../../components/__tests__/NewPokeCard";
+import pokeTypes from "../../data/__test__/types.json";
 
 function PokemonListPage() {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
 
   const [pokeData, setPokeData] = useState([]);
   const [currentPageUrl, setCurrentPageUrl] = useState(
@@ -39,9 +40,16 @@ function PokemonListPage() {
     });
   }, [currentPageUrl]);
 
+  function compareNumbers(a, b) {
+    return a.id - b.id;
+  }
+
+  // Setting the Current page URL to the next page of pokemon
   const onNextPageHandler = () => {
     setCurrentPageUrl(nextPageUrl);
   };
+
+  // Setting the Current page URL to the Previous page of pokemon
   const onPreviousPageHandler = () => {
     setCurrentPageUrl(previousPageUrl);
   };
@@ -107,7 +115,23 @@ function PokemonListPage() {
         )}
       </div>
 
-      <PokemonList showAddTeamModal={showAddTeamModal} pokemon={pokeData} />
+      <PokemonList>
+        {pokeData
+          .sort(compareNumbers)
+          .filter((item, index, arr) => arr.indexOf(item) === index)
+          .map((poke) => {
+            return (
+              <NewPokeCard
+                color1={pokeTypes[`${poke.types[0].type.name}`].color}
+                showAddTeamModal={showAddTeamModal}
+                key={poke.id}
+                pokemon={poke}
+              />
+            );
+          })}
+      </PokemonList>
+
+      {/*Modal for double-checking you want to add a pokemon to your team.*/}
       <ModalContainer active={showModal}>
         <ModalBackdrop />
         <Modal>
@@ -126,6 +150,18 @@ function PokemonListPage() {
     </div>
   );
 }
+
+// Pokemon List Styles
+
+const PokemonList = styled.div`
+  display: grid;
+  z-index: 1;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  justify-items: center;
+  gap: 10px;
+`;
+
+// Styles for the modal using styled components.
 
 const BtnContainer = styled.div`
   display: flex;

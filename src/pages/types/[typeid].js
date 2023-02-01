@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import pokeTypes from "./../../components/__tests__/types.json";
+import pokeTypes from "../../data/__test__/types.json";
 import axios from "axios";
-import Image from "next/image";
 import PokemonType from "../../components/PokemonType";
 
 export async function getServerSideProps(ctx) {

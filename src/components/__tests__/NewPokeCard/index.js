@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import * as S from "./NewPokeCard.styles";
-import charmander from "../charmander.json";
-import pokeTypes from "./../types.json";
+import pokeTypes from "../../../data/__test__/types.json";
 import tapu from "../tapu-koko.json";
 import Tilt from "react-parallax-tilt";
 import PokemonType from "../../PokemonType";
 import Gradient from "../Gradient";
-import Gradient2 from "../Gradient2";
 
 const NewPokeCard = ({
   pokemon,

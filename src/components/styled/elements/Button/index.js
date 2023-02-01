@@ -1,6 +1,4 @@
-import { StyledButton } from "./Button.styles";
-import { useRouter } from "next/router";
-
+import * as S from "./Button.styles";
 import React, { useEffect, useState } from "react";
 
 /**
@@ -13,55 +11,69 @@ import React, { useEffect, useState } from "react";
  clicked off if you want it to keep the border persistent then the href value of the button will tell it to
  keep the border when it's on that route.
  **/
-function Button(props) {
-  const router = useRouter();
-  const [color, setColor] = useState("#000000");
-  useEffect(() => setColor(props.color), []);
 
-  // * Adding an event listener on click to add a span that expands and removes itself after 1s
+const toggleCurrentActiveButton = () => {
+  // * Get the Element that has the active attribute
+  const activeButton = document?.querySelector("[active]");
 
-  if (typeof document !== "undefined") {
-    const buttons = document.querySelectorAll(".btn-default-mvzx");
+  // * if there is an active button then toggle the active attribute off
+  if (activeButton) {
+    activeButton.toggleAttribute("active", false);
+  }
+};
+
+const rippleEffect = (btn, event) => {
+  // * grab the x and y position of the mouse click for the ripple effect
+  let x = event.clientX - event.target.offsetLeft;
+  let y = event.clientY - event.target.offsetTop;
+
+  let ripples = document?.createElement("span");
+
+  ripples.style.left = x + "px";
+  ripples.style.top = y + "px";
+
+  if (!btn.querySelector("span")) {
+    btn.appendChild(ripples);
+  }
+
+  // * setting the timeout for the ripple
+  setTimeout(() => {
+    ripples.remove();
+  }, 700);
+};
+
+function Button({ color, children, ...props }) {
+  //? Setting the default colors for the button before page hydration
+  const [pageURL, setPageURL] = useState("");
+
+  //? Once the Page Loads The colors are set correctly
+  useEffect(() => {
+    setPageURL(window.location.pathname);
+    const buttons = document?.querySelectorAll(".btn-default");
     buttons.forEach((btn) => {
       // * Adding an event listener on click to add a span that expands and removes
       btn.addEventListener("click", (e) => {
-        // * Get the Element that has the active attribute
+        // * Toggle the current active button to off
+        toggleCurrentActiveButton();
 
-        const activeButton = document.querySelector("[active]");
-
-        // * grab the x and y position of the mouse click for the ripple effect
-        let x = e.clientX - e.target.offsetLeft;
-        let y = e.clientY - e.target.offsetTop;
-
-        // * if there is an active button then toggle the active attribute
-        if (activeButton) {
-          activeButton.toggleAttribute("active", false);
-        }
-
+        // * Add the active Attribute to the currently clicked button
         btn.toggleAttribute("active", true);
 
-        let ripples = document.createElement("span");
-        ripples.style.left = x + "px";
-        ripples.style.top = y + "px";
-        if (!btn.querySelector("span")) {
-          btn.appendChild(ripples);
-        }
-
-        // * setting the timeout for the ripple
-        setTimeout(() => {
-          ripples.remove();
-        }, 700);
+        // * Add the Ripple Effect to the button
+        rippleEffect(btn, e);
       });
     });
-  }
+  }, []);
 
-  // ? The component Actually rendered to the page
-  return (
-    // * Passing the props down th the component, so you can attach all the normal attribute's a link may have
-    <StyledButton route={router.asPath} fgcolor={color} {...props}>
-      <p>{props.children}</p>
-    </StyledButton>
-  );
+  if (typeof window !== "undefined") {
+    return (
+      <S.Button route={pageURL} bgcolor={color} {...props}>
+        <p>{children}</p>
+      </S.Button>
+    );
+  } else {
+    return null;
+  }
 }
 
 export default Button;

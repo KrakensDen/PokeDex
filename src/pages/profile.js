@@ -42,7 +42,7 @@ export async function getServerSideProps(ctx) {
 
 const Profile = ({ data, url }) => {
   const router = useRouter();
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const userImage = session?.user.image;
   const userName = session?.user.name;
   const accountCreated = data.data[0].accountCreated;
@@ -79,7 +79,7 @@ const Profile = ({ data, url }) => {
         },
       })
       .then((res) => {
-        router.reload(window.location.pathname);
+        router.reload();
         if (res.data.message === "PokeBox Is Full") {
           alert("PokeBox Is Full");
         }

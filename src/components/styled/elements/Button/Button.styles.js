@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import generateHex, { invertColor } from "/src/utils/StandardizeColor";
 
 /**
  Props:
@@ -12,96 +11,89 @@ import generateHex, { invertColor } from "/src/utils/StandardizeColor";
  keep the border when it's on that route.
  **/
 
-// * Custom styles for the component
-export const StyledButton = styled.a.attrs({
-  className: "btn-default-mvzx",
+export const Button = styled.a.attrs({
+  className: "btn-default",
 })`
+  :root {
+    --clr-neon: hsl(317 100% 54%);
+    --clr-bg: hsl(323 21% 16%);
+  }
+
   position: relative;
-  display: inline-block;
   z-index: 100;
+  display: inline-block;
   text-decoration: none;
-  padding: ${(props) => (props.sm ? "5px 2px" : "7px 45px")};
-  margin: 0 0.5rem;
-  color: ${(props) =>
-    props.color && typeof window !== "undefined"
-      ? invertColor(
-          props.fgcolor.startsWith("#")
-            ? props.fgcolor
-            : generateHex(props.fgcolor),
-          true
-        )
-      : "#ffffffee"};
+  padding: 0.25em 2em;
+  color: ${({ bgcolor }) => bgcolor ?? "#41a5ee"};
   cursor: pointer;
   border-radius: 0.75rem;
-  border: ${(props) => (props.color ? props.color : "var(--clr-neon)")} 0px
-    solid;
+  border: ${({ bgcolor }) => bgcolor ?? "none"} 0px solid;
   overflow: hidden;
-  background: ${(props) =>
-    props.fgcolor ? props.fgcolor : "var(--default-bg-gradient)"};
+  background: ${({ bgcolor }) => bgcolor ?? "#41a5ee"};
   user-select: none;
 
   transition: all 500ms ease-in-out;
 
   p {
     position: relative;
-    opacity: 0.8;
+    z-index: 300;
+    opacity: 0.9;
+    color: inherit;
+    filter: invert(1) grayscale(1) brightness(5);
     font-family: "Oswald", sans-serif;
     font-weight: 600;
-    z-index: 300;
     pointer-events: none;
   }
 
-  ${(props) =>
-    !props.sm &&
-    css`
-      span {
-        position: absolute;
-        background: ${(props) =>
-          props.color && typeof window !== "undefined"
-            ? invertColor(generateHex(props.color), true) + "aa"
-            : "#ffffffaa"};
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        border-radius: 50%;
-        z-index: 200;
-        animation: animate 700ms linear infinite;
-      }
-    `}
+  span {
+    position: absolute;
+    background-color: inherit;
+    filter: invert(1) grayscale(1);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 200;
+    animation: animate 700ms linear infinite;
+  }
+
+  /*  Enabling Transparent Backgrounds on the Button  */
 
   ${(props) =>
     props.transparent &&
     css`
       background: transparent;
-    `}
+      color: #111;
+    `};
 
+  /*  Enabling Consistent Border depending on the page youre on  */
   ${(props) =>
     props.href &&
     props.activated &&
     css`
-      border-bottom: ${(props) =>
-        props.href === props.route
-          ? `3px solid ${props.color ? props.color : "#23a9f2"}`
+      border-bottom: ${({ href, route, bgcolor }) =>
+        href === route
+          ? `3px solid ${bgcolor ? bgcolor : "#23a9f2"}`
           : " none"};
-    `}
+    `};
+
+  /*  Enabling This will make the button keep a border bor as long as it is active/focused */
 
   ${(props) =>
     props.activated &&
     css`
       &[active] {
         border-bottom: 5px solid
-          ${(props) =>
-            props.color && typeof window !== "undefined"
-              ? invertColor(generateHex(props.color), true) + "44"
-              : "#ffffffaa"};
+          ${({ bgcolor }) => (bgcolor ? bgcolor + "44" : "#ffffffaa")};
       }
-    `}
+    `};
 
   ${(props) =>
     props.bordered &&
     css`
       border: 1px solid #222222bb;
-    `}
+    `};
 
+  /* The Neon Button */
   ${(props) =>
     props.glow &&
     css`
@@ -109,25 +101,26 @@ export const StyledButton = styled.a.attrs({
       display: inline-block;
       cursor: pointer;
       text-decoration: none;
-      color: ${(props) => (props.color ? props.color : "var(--clr-neon)")};
-      background: #00000000;
-      border: ${(props) => (props.color ? props.color : "var(--clr-neon)")} 0px
-        solid;
+      color: ${({ bgcolor }) => bgcolor ?? "var(--clr-neon)"};
+      background: transparent;
+      border: ${({ bgcolor }) => bgcolor ?? "var(--clr-neon)"} 0px solid;
       padding: 7px 30px;
       position: relative;
       z-index: 1;
-      text-shadow: 0 0 0.125em
-          ${(props) => (props.color ? props.color : "var(--clr-neon)")},
+      text-shadow: 0 0 0.125em ${({ bgcolor }) => bgcolor ?? "var(--clr-neon)"},
         0 0 0.25em currentColor;
 
       transition: all 500ms ease-in-out;
+
+      p {
+        filter: none;
+      }
 
       &:before {
         pointer-events: none;
         content: "";
         position: absolute;
-        background: ${(props) =>
-          props.color ? props.color : "var(--clr-neon)"};
+        background: ${({ bgcolor }) => bgcolor ?? "var(--clr-neon)"};
         top: 100%;
         left: 0;
         right: 0;
@@ -145,24 +138,19 @@ export const StyledButton = styled.a.attrs({
 
       &:focus,
       :hover {
-        background: ${(props) =>
-          props.color ? props.color : "var(--clr-neon)"};
-        color: ${(props) =>
-          props.color && typeof document !== "undefined"
-            ? invertColor(generateHex(props.color), true)
-            : "var(--clr-bg)"};
+        background: ${({ bgcolor }) => (bgcolor ? bgcolor : "var(--clr-neon)")};
+        color: ${({ bgcolor }) => bgcolor ?? "var(--clr-bg)"};
         text-shadow: none;
         box-shadow: 0 0 11px
-          ${(props) => (props.color ? props.color : "var(--clr-neon)")};
+          ${({ bgcolor }) => (bgcolor ? bgcolor : "var(--clr-neon)")};
+
+        p {
+          filter: invert(1) grayscale(1) brightness(5);
+        }
       }
 
       &:focus::before,
       :hover::before {
-        opacity: 1;
-      }
-
-      &:focus::after,
-      :hover::after {
         opacity: 1;
       }
 

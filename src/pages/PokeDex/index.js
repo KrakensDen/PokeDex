@@ -8,6 +8,7 @@ import { PokemonPageContainer } from "../../components/styled/containers/Contain
 import SideBar from "../../layouts/SideBar/SideBar";
 import NewPokeCard from "../../components/__tests__/NewPokeCard";
 import pokeTypes from "../../data/__test__/types.json";
+import DragAndDropBox from "../../components/__tests__/DragAndDropBox";
 
 function PokemonListPage() {
   const { data: session } = useSession();
@@ -201,11 +202,12 @@ const ModalBackdrop = styled.div`
 
 PokemonListPage.getLayout = function getLayout(page) {
   return (
-    <AppLayout headTitle={"Pokemon List"} title={"PokemonList"}>
+    <AppLayout headTitle={"Pokemon List"} title={"PokeDex"}>
       <PokemonPageContainer>
         <SideBar />
         {page}
       </PokemonPageContainer>
+      <DragAndDropBox />
     </AppLayout>
   );
 };

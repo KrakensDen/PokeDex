@@ -18,7 +18,7 @@ const SideBar = () => {
               <div key={index}>
                 <Link
                   className={styles.link}
-                  href={"/PokemonList"}
+                  href={"/PokeDex"}
                   id={name}
                   key={index}
                 >

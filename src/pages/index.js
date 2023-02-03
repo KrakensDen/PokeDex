@@ -5,11 +5,13 @@ export default function Home() {
   return (
     <main>
       <NewPokeCard />
-      <Button glow color={"green"}>
-        hello
+      <Button color={"green"}>hello</Button>
+      <Button color={"red"} href={"/PokeDex"}>
+        Pokemon List
       </Button>
-      <Button href={"/PokemonList"}>Pokemon List</Button>
-      <Button href={"/overview"}>Auth Testing</Button>
+      <Button color={"yellow"} href={"/overview"}>
+        Auth Testing
+      </Button>
     </main>
   );
 }

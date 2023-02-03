@@ -51,6 +51,9 @@ function Button({ color, children, ...props }) {
     setPageURL(window.location.pathname);
     const buttons = document?.querySelectorAll(".btn-default");
     buttons.forEach((btn) => {
+      if (btn.attributes["href"]?.value === pageURL) {
+        btn.setAttribute("active", "true");
+      }
       // * Adding an event listener on click to add a span that expands and removes
       btn.addEventListener("click", (e) => {
         // * Toggle the current active button to off
@@ -67,7 +70,7 @@ function Button({ color, children, ...props }) {
 
   if (typeof window !== "undefined") {
     return (
-      <S.Button route={pageURL} bgcolor={color} {...props}>
+      <S.Button route={pageURL} color={color ?? "#23a9f2"} {...props}>
         <p>{children}</p>
       </S.Button>
     );

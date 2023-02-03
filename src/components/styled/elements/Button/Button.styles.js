@@ -24,12 +24,12 @@ export const Button = styled.a.attrs({
   display: inline-block;
   text-decoration: none;
   padding: 0.25em 2em;
-  color: ${({ bgcolor }) => bgcolor ?? "#41a5ee"};
+  color: ${({ color }) => color ?? "#41a5ee"};
   cursor: pointer;
   border-radius: 0.75rem;
-  border: ${({ bgcolor }) => bgcolor ?? "none"} 0px solid;
+  border: ${({ color }) => color ?? "none"} 0px solid;
   overflow: hidden;
-  background: ${({ bgcolor }) => bgcolor ?? "#41a5ee"};
+  background: ${({ color }) => color ?? "#41a5ee"};
   user-select: none;
 
   transition: all 500ms ease-in-out;
@@ -39,7 +39,7 @@ export const Button = styled.a.attrs({
     z-index: 300;
     opacity: 0.9;
     color: inherit;
-    filter: invert(1) grayscale(1) brightness(5);
+    filter: invert(1) grayscale(1) contrast(40);
     font-family: "Oswald", sans-serif;
     font-weight: 600;
     pointer-events: none;
@@ -70,10 +70,8 @@ export const Button = styled.a.attrs({
     props.href &&
     props.activated &&
     css`
-      border-bottom: ${({ href, route, bgcolor }) =>
-        href === route
-          ? `3px solid ${bgcolor ? bgcolor : "#23a9f2"}`
-          : " none"};
+      border-bottom: ${({ href, route, color }) =>
+        href === route ? `3px solid ${color}` : " none"};
     `};
 
   /*  Enabling This will make the button keep a border bor as long as it is active/focused */
@@ -83,7 +81,7 @@ export const Button = styled.a.attrs({
     css`
       &[active] {
         border-bottom: 5px solid
-          ${({ bgcolor }) => (bgcolor ? bgcolor + "44" : "#ffffffaa")};
+          ${({ color }) => (color ? color + "44" : "#ffffffaa")};
       }
     `};
 
@@ -101,13 +99,13 @@ export const Button = styled.a.attrs({
       display: inline-block;
       cursor: pointer;
       text-decoration: none;
-      color: ${({ bgcolor }) => bgcolor ?? "var(--clr-neon)"};
+      color: ${({ color }) => color ?? "var(--clr-neon)"};
       background: transparent;
-      border: ${({ bgcolor }) => bgcolor ?? "var(--clr-neon)"} 0px solid;
+      border: ${({ color }) => color ?? "var(--clr-neon)"} 0px solid;
       padding: 7px 30px;
       position: relative;
       z-index: 1;
-      text-shadow: 0 0 0.125em ${({ bgcolor }) => bgcolor ?? "var(--clr-neon)"},
+      text-shadow: 0 0 0.125em ${({ color }) => color ?? "var(--clr-neon)"},
         0 0 0.25em currentColor;
 
       transition: all 500ms ease-in-out;
@@ -120,7 +118,7 @@ export const Button = styled.a.attrs({
         pointer-events: none;
         content: "";
         position: absolute;
-        background: ${({ bgcolor }) => bgcolor ?? "var(--clr-neon)"};
+        background: ${({ color }) => color ?? "var(--clr-neon)"};
         top: 100%;
         left: 0;
         right: 0;
@@ -138,11 +136,10 @@ export const Button = styled.a.attrs({
 
       &:focus,
       :hover {
-        background: ${({ bgcolor }) => (bgcolor ? bgcolor : "var(--clr-neon)")};
-        color: ${({ bgcolor }) => bgcolor ?? "var(--clr-bg)"};
+        background: ${({ color }) => color ?? "var(--clr-neon)"};
+        color: ${({ color }) => color ?? "var(--clr-bg)"};
         text-shadow: none;
-        box-shadow: 0 0 11px
-          ${({ bgcolor }) => (bgcolor ? bgcolor : "var(--clr-neon)")};
+        box-shadow: 0 0 11px ${({ color }) => color ?? "var(--clr-neon)"};
 
         p {
           filter: invert(1) grayscale(1) brightness(5);
@@ -159,8 +156,8 @@ export const Button = styled.a.attrs({
         css`
           &[active] {
             border-bottom: 5px solid
-              ${(props) => (props.color ? props.color : "var(--clr-neon)")};
-            box-shadow: 0 9px 8px -8px ${props.color};
+              ${({ color }) => color ?? "var(--clr-neon)"};
+            box-shadow: 0 9px 8px -8px ${({ color }) => color ?? "var(--clr-neon)"};
           }
         `}
     `}

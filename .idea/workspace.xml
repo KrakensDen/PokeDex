@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="Refactored the Custom Button in the components/elements/Button to look and run a lot better. using css filters to invert the text color instead of js functions. also refactored the global styles out of the _app file and put it in the styles folder and imported it into the _app file">
-      <change afterPath="$PROJECT_DIR$/src/components/__tests__/DragAndDropBox/DragAndDropBox.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/__tests__/DragAndDropBox/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled/elements/Button/Button.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/elements/Button/Button.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled/elements/Button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/elements/Button/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PokemonList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PokeDex/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/test.js" afterDir="false" />
-    </list>
+    <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="Refactored the Custom Button in the components/elements/Button to look and run a lot better. using css filters to invert the text color instead of js functions. also refactored the global styles out of the _app file and put it in the styles folder and imported it into the _app file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +20,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="b5c6f6b8-43f4-4781-bd68-5d2ddf6c087a" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -54,7 +47,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\TedCu\\AppData\\Roaming\\npm\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
     "ts.external.directory.path": "C:\\Users\\TedCu\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\223.8214.51\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -138,7 +131,7 @@
       <workItem from="1675454660163" duration="60000" />
       <workItem from="1675454727113" duration="525000" />
       <workItem from="1675455260649" duration="17000" />
-      <workItem from="1675455289443" duration="737000" />
+      <workItem from="1675455289443" duration="851000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1673411356460</created>
@@ -203,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675289900701</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactored the Custom Button in the components/elements/Button to look and run a lot better. using css filters to invert the text color instead of js functions. also refactored the global styles out of the _app file and put it in the styles folder and imported it into the _app file">
+      <created>1675456037780</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675456037780</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,5 +230,6 @@
     <MESSAGE value="Made the profile head a grid layout and made it more responsive on smaller screen sizes. Did the same to the Top Six: list. and Started working on a universal modal that can be passed arrays to fill the content with whatever you like." />
     <MESSAGE value="Refactored the Custom Button in the components/elements/Button to look and run a lot better. using css filters to invert the text color instead of js functions. also refactored the global styles out of the _app file and put it in the styles folder and imported it into the _app file" />
     <option name="LAST_COMMIT_MESSAGE" value="Refactored the Custom Button in the components/elements/Button to look and run a lot better. using css filters to invert the text color instead of js functions. also refactored the global styles out of the _app file and put it in the styles folder and imported it into the _app file" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

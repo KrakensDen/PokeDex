@@ -1,0 +1,85 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"32673ad4-2ec4-4ab7-87cc-277ba8495134\" name=\"Changes\" comment=\"test\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/form/AuthForm/Auth0Form.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/form/AuthForm/Auth0Form.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/components/ui/Popover/Popover.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/ui/Popover/Popover.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/pages/_app.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/pages/_app.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/pages/index.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/pages/index.js\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"planetscale-auth-w-prisma\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2K6gH9YN9NwQRteXLFbD9A0BSzw\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;N:/_VSCode/_Tests/StyledComponents/first-library&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;ts.external.directory.path&quot;: &quot;C:\\\\Users\\\\TedCu\\\\AppData\\\\Local\\\\JetBrains\\\\Toolbox\\\\apps\\\\WebStorm\\\\ch-0\\\\223.8214.51\\\\plugins\\\\javascript-impl\\\\jsLanguageServicesImpl\\\\external&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"32673ad4-2ec4-4ab7-87cc-277ba8495134\" name=\"Changes\" comment=\"\" />\r\n      <created>1673300355552</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1673300355552</updated>\r\n      <workItem from=\"1673300356690\" duration=\"45000\" />\r\n      <workItem from=\"1673300414394\" duration=\"157000\" />\r\n      <workItem from=\"1673317591606\" duration=\"75000\" />\r\n      <workItem from=\"1673410752393\" duration=\"752000\" />\r\n      <workItem from=\"1673411519614\" duration=\"4753000\" />\r\n      <workItem from=\"1673469699606\" duration=\"12000\" />\r\n      <workItem from=\"1673567150678\" duration=\"150000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"test\">\r\n      <created>1673411356460</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673411356460</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"test\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"test\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision b4ae65251af2516e675b0d6a7e2406429bf1062f)
++++ b/.idea/workspace.xml	(date 1675459211613)
+@@ -4,12 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="test">
+-      <change beforePath="$PROJECT_DIR$/src/components/form/AuthForm/Auth0Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/AuthForm/Auth0Form.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/ui/Popover/Popover.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Popover/Popover.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+-    </list>
++    <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="test" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -18,7 +13,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="planetscale-auth-w-prisma" />
++        <entry key="$PROJECT_DIR$" value="nates-edit" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -27,6 +22,9 @@
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="2K6gH9YN9NwQRteXLFbD9A0BSzw" />
++  <component name="ProjectLevelVcsManager">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+@@ -80,7 +78,19 @@
+       <map>
+         <entry key="MAIN">
+           <value>
+-            <State />
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="nextauth-w-prisma" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
+           </value>
+         </entry>
+       </map>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision b4ae65251af2516e675b0d6a7e2406429bf1062f)
++++ b/.idea/vcs.xml	(date 1675459211649)
+@@ -1,5 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="CommitMessageInspectionProfile">
++    <profile version="1.0">
++      <inspection_tool class="SubjectBodySeparation" enabled="false" level="TEXT ATTRIBUTES" enabled_by_default="false" />
++    </profile>
++  </component>
+   <component name="VcsDirectoryMappings">
+     <mapping directory="" vcs="Git" />
+   </component>

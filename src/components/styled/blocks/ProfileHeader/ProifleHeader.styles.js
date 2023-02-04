@@ -17,8 +17,7 @@ export const ProfileHead = styled.div`
 
 export const ProfileImg = styled.div`
   place-self: flex-end;
-  width: 90px;
-  height: 90px;
+  aspect-ratio: 1;
   border: 2px solid #222222ee;
   border-radius: 0.75rem;
   overflow: hidden;

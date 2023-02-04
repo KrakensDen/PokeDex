@@ -293,7 +293,7 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     font-family: ${(props) => props.theme.fontFamily};
-    color: #eee;
+    color: #999;
   }
 
   button {

@@ -28,30 +28,30 @@ export default function CamperVanPage() {
 
   if (status === "authenticated") {
     return (
-      <>
-        <button onClick={clickHandler}>getSession</button>
-        <button onClick={csrfToken}>csrf Token</button>
+        <div>
+            <button onClick={clickHandler}>getSession</button>
+            <button onClick={csrfToken}>csrf Token</button>
 
-        <div style={{ display: "flex" }}>
-          {session.user.image && (
-            <Image
-              style={{
-                borderRadius: 50 + "%",
-              }}
-              height={40}
-              width={40}
-              src={session.user.image}
-              alt={`${session.user.name} Profile Picture`}
+            <div style={{display: "flex"}}>
+                {session.user.image && (
+                    <Image
+                        style={{
+                            borderRadius: 50 + "%",
+                        }}
+                        height={40}
+                        width={40}
+                        src={session.user.image}
+                        alt={`${session.user.name} Profile Picture`}
+                    />
+                )}
+                <p>Signed in as {userEmail}</p>
+            </div>
+            <button onClick={() => signOut()}>Sign out</button>
+            <img
+                alt={"sign-out"}
+                src="https://cdn.pixabay.com/photo/2017/08/11/19/36/vw-2632486_1280.png"
             />
-          )}
-          <p>Signed in as {userEmail}</p>
         </div>
-        <button onClick={() => signOut()}>Sign out</button>
-        <img
-          alt={"sign-out"}
-          src="https://cdn.pixabay.com/photo/2017/08/11/19/36/vw-2632486_1280.png"
-        />
-      </>
     );
   }
 

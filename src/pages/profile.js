@@ -116,7 +116,7 @@ const Profile = ({ data, url }) => {
           </BtnContainer>
         </Modal>
       </ModalContainer>
-      <SettingModal open={open} editingProfile={EditProfileHandler} />
+      <SettingModal open={open} editingProfile={EditProfileHandler} session={session} />
       <ProfileHeader
         editingProfile={EditProfileHandler}
         userLvl={0.65}

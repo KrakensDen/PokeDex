@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="just refactoring out the code to look a bit better">
-      <change afterPath="$PROJECT_DIR$/.idea/icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="Added Username Updating functionality in the profile settings modal.">
+      <change afterPath="$PROJECT_DIR$/src/components/styled/elements/Input/Input.styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/styled/elements/Input/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/api/User/update.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/ProifleHeader.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/ProfileHeader/ProifleHeader.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/overview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/GlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/GlobalStyles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/variables.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/variables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/Form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/Form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/SettingModal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/SettingModal/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,10 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -55,14 +59,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "full.screen.before.presentation.mode": "false",
-    "last_opened_file_path": "N:/_VSCode/_Lessons/Udemy/JS-complete-guide/Practice/oop-starting-setup",
+    "last_opened_file_path": "N:/_VSCode/pokedex-project/src/components/styled/elements",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.better-comments",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\TedCu\\AppData\\Roaming\\npm\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "C:\\Users\\TedCu\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\223.8214.51\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -106,15 +112,6 @@
       <workItem from="1673411519614" duration="4753000" />
       <workItem from="1673469699606" duration="12000" />
       <workItem from="1673567150678" duration="150000" />
-      <workItem from="1675460596631" duration="1411000" />
-      <workItem from="1675467439147" duration="24000" />
-      <workItem from="1675467476325" duration="1851000" />
-      <workItem from="1675469346421" duration="358000" />
-      <workItem from="1675469748089" duration="136000" />
-      <workItem from="1675473096119" duration="5000" />
-      <workItem from="1675476776691" duration="43000" />
-      <workItem from="1675477581170" duration="619000" />
-      <workItem from="1675542021694" duration="264000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1673411356460</created>
@@ -123,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673411356460</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Username Updating functionality in the profile settings modal.">
+      <created>1675557043921</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675557043921</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -35,6 +35,10 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -111,15 +115,6 @@
       <workItem from="1673411519614" duration="4753000" />
       <workItem from="1673469699606" duration="12000" />
       <workItem from="1673567150678" duration="150000" />
-      <workItem from="1675460596631" duration="1411000" />
-      <workItem from="1675467439147" duration="24000" />
-      <workItem from="1675467476325" duration="1851000" />
-      <workItem from="1675469346421" duration="358000" />
-      <workItem from="1675469748089" duration="136000" />
-      <workItem from="1675473096119" duration="5000" />
-      <workItem from="1675476776691" duration="43000" />
-      <workItem from="1675477581170" duration="619000" />
-      <workItem from="1675542021694" duration="264000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1673411356460</created>

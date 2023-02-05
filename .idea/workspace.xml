@@ -29,10 +29,19 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="JsBowerSettings">
-    <bower-package value="" />
-    <bower.json value="" />
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b5c6f6b8-43f4-4781-bd68-5d2ddf6c087a" />
+        <option name="url" value="https://github.com/KrakensDen/PokeDex.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -42,31 +51,32 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "N:/_VSCode/pokedex-project/src/components/styled/elements",
+    "last_opened_file_path": "N:/_Code/_Lessons/Udemy/JS-complete-guide/Practice/oop-starting-setup",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\TedCu\\AppData\\Roaming\\npm\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "ssh.settings",
     "ts.external.directory.path": "C:\\Users\\TedCu\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\223.8214.51\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="N:\_VSCode\pokedex-project\src\components\styled\elements" />
-    </key>
-  </component>
+}</component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -87,6 +97,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\TedCu\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="" />
@@ -101,9 +114,15 @@
       <workItem from="1673411519614" duration="4753000" />
       <workItem from="1673469699606" duration="12000" />
       <workItem from="1673567150678" duration="150000" />
-      <workItem from="1675557565612" duration="93000" />
-      <workItem from="1675557700703" duration="2730000" />
-      <workItem from="1675631047327" duration="2372000" />
+      <workItem from="1675460596631" duration="1411000" />
+      <workItem from="1675467439147" duration="24000" />
+      <workItem from="1675467476325" duration="1851000" />
+      <workItem from="1675469346421" duration="358000" />
+      <workItem from="1675469748089" duration="136000" />
+      <workItem from="1675473096119" duration="5000" />
+      <workItem from="1675476776691" duration="43000" />
+      <workItem from="1675477581170" duration="619000" />
+      <workItem from="1675542021694" duration="401000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1673411356460</created>
@@ -112,21 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673411356460</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added Username Updating functionality in the profile settings modal.">
-      <created>1675557043921</created>
+    <task id="LOCAL-00002" summary="just refactoring out the code to look a bit better">
+      <created>1675542298259</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1675557043921</updated>
+      <updated>1675542298259</updated>
     </task>
-    <task id="LOCAL-00003" summary="Added Username Updating functionality in the profile settings modal. testing ssh">
-      <created>1675632941974</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1675632941974</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,10 +156,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="test" />
     <MESSAGE value="Testing" />
-    <MESSAGE value="Added Username Updating functionality in the profile settings modal." />
-    <MESSAGE value="Added Username Updating functionality in the profile settings modal. testing ssh" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Username Updating functionality in the profile settings modal. testing ssh" />
+    <MESSAGE value="just refactoring out the code to look a bit better" />
+    <option name="LAST_COMMIT_MESSAGE" value="just refactoring out the code to look a bit better" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

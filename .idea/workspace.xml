@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32673ad4-2ec4-4ab7-87cc-277ba8495134" name="Changes" comment="Added Username Updating functionality in the profile settings modal.">
-      <change afterPath="$PROJECT_DIR$/src/components/styled/elements/Input/Input.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/styled/elements/Input/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/api/User/update.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/Form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/Form/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styled/blocks/SettingModal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/blocks/SettingModal/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewModal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewModal/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styled/elements/Input/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styled/elements/Input/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +113,9 @@
       <workItem from="1673411519614" duration="4753000" />
       <workItem from="1673469699606" duration="12000" />
       <workItem from="1673567150678" duration="150000" />
+      <workItem from="1675557565612" duration="93000" />
+      <workItem from="1675557700703" duration="2730000" />
+      <workItem from="1675631047327" duration="1865000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1673411356460</created>
@@ -132,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675557043921</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Username Updating functionality in the profile settings modal. testing ssh">
+      <created>1675632941974</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675632941974</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +159,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="Testing" />
     <MESSAGE value="Added Username Updating functionality in the profile settings modal." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Username Updating functionality in the profile settings modal." />
+    <MESSAGE value="Added Username Updating functionality in the profile settings modal. testing ssh" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Username Updating functionality in the profile settings modal. testing ssh" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./Modal.styles";
 import Button from "../styled/elements/Button";
+import Input from "../styled/elements/Input";
 
 const prepareForm = (labelInputs) => {
   return labelInputs.reduce((r, v) => ({ ...r, [v.name]: "" }), {});
@@ -38,10 +39,10 @@ const Modal = ({
         <S.ModalContent>
           {labelInputs.map(({ label, name, type }) => (
             <S.LabelContainer>
-              <label htmlFor={name}>{label}:</label>
-              <input
-                type={type}
+              <Input
+                label={label}
                 name={name}
+                type={type}
                 value={form.name}
                 onChange={(e) => onChangeHandler(e)}
               />

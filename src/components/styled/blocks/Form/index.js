@@ -6,7 +6,7 @@ const prepareForm = (formArr) => {
   return formArr.reduce((r, v) => ({ ...r, [v.name]: "" }), {});
 };
 
-const Form = ({ title, formArr, submitBtn, onSubmit, redirect }) => {
+const Form = ({ title, formArr, submitBtn, onSubmit, redirect, ...props }) => {
   const initialForm = prepareForm(formArr);
   const [form, setForm] = useState(initialForm);
 
@@ -19,7 +19,7 @@ const Form = ({ title, formArr, submitBtn, onSubmit, redirect }) => {
   };
 
   return (
-    <S.Form autoComplete="off">
+    <S.Form autoComplete="off" {...props}>
       <S.FormTitle>{title}</S.FormTitle>
       {formArr.map(({ label, name, type }, index) => (
         <S.FormControl key={index}>
